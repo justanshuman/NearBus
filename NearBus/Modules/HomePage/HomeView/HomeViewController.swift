@@ -18,6 +18,8 @@ protocol IHomeViewController: class {
     func toggleLoadingView(show: Bool)
     func showErrorMessage(title: String?, message: String?, actionTitle: String?, completionBlock: (() -> Void)?)
     func markBusStop(location: CLLocationCoordinate2D, name: String)
+    func toggleNoBusStopsView(show: Bool)
+    func removeAllMarkers()
 }
 
 
@@ -27,6 +29,7 @@ class HomeViewController: UIViewController, IHomeViewController {
 
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var loadingView: LoadingView!
+    @IBOutlet weak var noBusStopsView: UIView!
     
     var viewModel: IHomeViewModel?
     
@@ -41,6 +44,7 @@ class HomeViewController: UIViewController, IHomeViewController {
         super.viewDidLoad()
         self.title = "NearBus"
         viewModel?.hookUpView()
+        addSelectRadiusButton()
         foregroundNotification = NotificationCenter.default.addObserver(forName: NSNotification.Name.UIApplicationWillEnterForeground, object: nil, queue: OperationQueue.main) {
             [weak self] notification in
             self?.viewModel?.checkForAccess()
@@ -70,6 +74,31 @@ class HomeViewController: UIViewController, IHomeViewController {
         mapView.camera = camera
     }
 
+    func addSelectRadiusButton() {
+        let rightBarButtonItem = UIBarButtonItem(title: "Radius", style: .plain, target: self, action: #selector(radiusButtonPressed))
+        self.navigationItem.rightBarButtonItem = rightBarButtonItem
+    }
+    
+    func radiusButtonPressed(sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: "Select Radius", message: nil, preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "100", style: .default) { action in
+            self.viewModel?.setRadius(value: 100)
+        })
+        alertController.addAction(UIAlertAction(title: "500", style: .default) { action in
+            self.viewModel?.setRadius(value: 500)
+        })
+        alertController.addAction(UIAlertAction(title: "1000", style: .default) { action in
+            self.viewModel?.setRadius(value: 1000)
+        })
+        alertController.addAction(UIAlertAction(title: "1500", style: .default) { action in
+            self.viewModel?.setRadius(value: 1500)
+        })
+        if let popoverController = alertController.popoverPresentationController {
+            popoverController.barButtonItem = sender
+        }
+        present(alertController, animated: true, completion: nil)
+    }
+    
     /* Print didReceiveMemoryWarning, print works only in DEBUG mode.
      */
     override func didReceiveMemoryWarning() {
@@ -123,6 +152,10 @@ class HomeViewController: UIViewController, IHomeViewController {
         })
     }
     
+    func toggleNoBusStopsView(show: Bool) {
+        noBusStopsView.isHidden = !show
+    }
+    
     func markBusStop(location: CLLocationCoordinate2D, name: String) {
         let position = location
         let marker = GMSMarker(position: position)
@@ -130,6 +163,11 @@ class HomeViewController: UIViewController, IHomeViewController {
         marker.title = "\(name)"
         marker.icon = carMarkerImage
         marker.map = mapView
+    }
+    
+    func removeAllMarkers() {
+        busStopMarkers = []
+        mapView.clear()
     }
     
     deinit {

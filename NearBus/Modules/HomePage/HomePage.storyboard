@@ -25,6 +25,25 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rpd-xk-knB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfS-X3-2hJ">
+                                        <rect key="frame" x="33.5" y="302.5" width="308" height="41"/>
+                                        <string key="text">Sorry! No bus stops found around you.
+Try increasing the radius.</string>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.39679418103448277" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="IfS-X3-2hJ" firstAttribute="centerY" secondItem="rpd-xk-knB" secondAttribute="centerY" id="NU7-CT-MIe"/>
+                                    <constraint firstItem="IfS-X3-2hJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rpd-xk-knB" secondAttribute="leading" constant="20" id="TVi-57-egR"/>
+                                    <constraint firstItem="IfS-X3-2hJ" firstAttribute="centerX" secondItem="rpd-xk-knB" secondAttribute="centerX" id="mSH-2d-jVP"/>
+                                </constraints>
+                            </view>
                             <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0W8-IV-pVV" customClass="LoadingView" customModule="NearBus" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -37,15 +56,20 @@
                             <constraint firstItem="bi1-w7-UVt" firstAttribute="top" secondItem="RzN-mU-l9K" secondAttribute="bottom" id="IFK-bG-fKD"/>
                             <constraint firstItem="bi1-w7-UVt" firstAttribute="leading" secondItem="BNM-1p-Ci9" secondAttribute="leading" id="MJ1-xJ-0si"/>
                             <constraint firstAttribute="trailing" secondItem="bi1-w7-UVt" secondAttribute="trailing" id="RDT-sw-Wp4"/>
+                            <constraint firstItem="rpd-xk-knB" firstAttribute="top" secondItem="RzN-mU-l9K" secondAttribute="bottom" id="RcX-Hs-wfh"/>
+                            <constraint firstAttribute="trailing" secondItem="rpd-xk-knB" secondAttribute="trailing" id="WUF-EW-mCz"/>
                             <constraint firstItem="uyQ-Ul-XYR" firstAttribute="top" secondItem="0W8-IV-pVV" secondAttribute="bottom" id="YEG-Oq-f9N"/>
+                            <constraint firstItem="uyQ-Ul-XYR" firstAttribute="top" secondItem="rpd-xk-knB" secondAttribute="bottom" id="czv-2K-RLP"/>
                             <constraint firstItem="uyQ-Ul-XYR" firstAttribute="top" secondItem="bi1-w7-UVt" secondAttribute="bottom" id="hXp-Q5-UQK"/>
                             <constraint firstItem="0W8-IV-pVV" firstAttribute="leading" secondItem="BNM-1p-Ci9" secondAttribute="leading" id="hcn-hk-hQh"/>
+                            <constraint firstItem="rpd-xk-knB" firstAttribute="leading" secondItem="BNM-1p-Ci9" secondAttribute="leading" id="tCv-vx-abA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Kqq-u5-F9m"/>
                     <connections>
                         <outlet property="loadingView" destination="0W8-IV-pVV" id="4L6-4R-eCB"/>
                         <outlet property="mapView" destination="bi1-w7-UVt" id="Sip-rS-i4l"/>
+                        <outlet property="noBusStopsView" destination="rpd-xk-knB" id="Nag-s3-EqH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JdL-6R-HAU" userLabel="First Responder" sceneMemberID="firstResponder"/>

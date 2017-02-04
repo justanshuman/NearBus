@@ -17,6 +17,7 @@ protocol IHomeViewModel {
     func setLocation(location: CLLocationCoordinate2D)
     func checkForAccess()
     func tappedAt(index: Int)
+    func setRadius(value: Int)
 }
 
 /* Actual implementation of HomeViewModel. This class will have all Logic and state required for HomeViewController. This will help in keeping the view (i.e. ViewController) a dumb class.
@@ -37,7 +38,7 @@ class HomeViewModel: IHomeViewModel {
         }
     }
     
-    let radius: Int = 1000
+    var radius: Int = 1000
     var nearByBusStops = [BusStop]()
     
     /* HomeViewModel should always have an associated View, hence only 1 init.
@@ -85,6 +86,13 @@ class HomeViewModel: IHomeViewModel {
         guard let centerLocation = centerLocation else {
             return
         }
+        
+        //Reset the map state before fetching bus stops again
+        view?.toggleLoadingView(show: true)
+        view?.toggleNoBusStopsView(show: false)
+        view?.removeAllMarkers()
+        nearByBusStops = []
+        
 //        fetchNearbyBusStops(latitude: centerLocation.latitude, longitude: centerLocation.longitude, radius: radius)
         fetchNearbyBusStops(latitude: 24.44072, longitude: 54.44392, radius: radius)
     }
@@ -105,12 +113,19 @@ class HomeViewModel: IHomeViewModel {
                     }
                 }
                 if let stops = self?.nearByBusStops {
-                    self?.markBusStopsOnMap(busStops: stops)
+                    if stops.count > 0 {
+                        self?.markBusStopsOnMap(busStops: stops)
+                        self?.view?.toggleNoBusStopsView(show: false)
+                    } else {
+                        self?.view?.toggleNoBusStopsView(show: true)
+                    }
                 }
+                self?.view?.toggleLoadingView(show: false)
             }
             }, failure: {
                 [weak self] error in
                 if let errorMessage = error?["error"] as? String {
+                    self?.view?.toggleLoadingView(show: false)
                     self?.view?.showErrorMessage(title: nil, message: errorMessage, actionTitle: "Retry", completionBlock: {
                         self?.getNearByBusStops()
                     })
@@ -129,5 +144,10 @@ class HomeViewModel: IHomeViewModel {
     
     func tappedAt(index: Int) {
         view?.showErrorMessage(title: "", message: "\(nearByBusStops[index].name)", actionTitle: nil, completionBlock: nil)
+    }
+    
+    func setRadius(value: Int) {
+        radius = value
+        getNearByBusStops()
     }
 }

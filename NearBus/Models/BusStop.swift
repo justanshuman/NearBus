@@ -27,7 +27,7 @@ struct BusStop {
         }
         if let location = busStop["location"] as? [String: AnyObject] {
             if let coordinates = location["coordinates"] as? [Double], coordinates.count == 2 {
-                self.location = CLLocationCoordinate2D(latitude: coordinates[0], longitude: coordinates[1])
+                self.location = CLLocationCoordinate2D(latitude: coordinates[1], longitude: coordinates[0])
             }
         }
     }
