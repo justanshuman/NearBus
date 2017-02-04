@@ -8,10 +8,18 @@
 
 import UIKit
 
+/* This print function is automatically disabled when releasing a prod version of the app.
+ */
+func print(items: Any..., separator: String = " ", terminator: String = "\n") {
+    #if DEBUG
+        Swift.print(items, separator: separator, terminator: terminator)
+    #endif
+}
+
 extension UIViewController {
     func showAlertPopUpWith(title: String?, message: String?, actionTitle: String? = "Ok", completionHandler: ((_ action : UIAlertAction) -> Void)?){
         let alert = UIAlertController(title: title ?? "", message: message ?? "", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: completionHandler))
+        alert.addAction(UIAlertAction(title: actionTitle ?? "Ok", style: UIAlertActionStyle.default, handler: completionHandler))
         self.present(alert, animated: true, completion: nil)
     }
 }
@@ -23,6 +31,10 @@ extension UIColor {
         let newBlue = CGFloat(blue) / 255
         
         self.init(red: newRed, green: newGreen, blue: newBlue, alpha: 1)
+    }
+    
+    static func nearBusBlackColor() -> UIColor {
+        return UIColor(red: 33, green: 33, blue: 33)
     }
 }
 

@@ -77,22 +77,32 @@ class APIController {
                 })
                 
                 if error != nil {
+                    DispatchQueue.main.async(execute: { () -> Void in
                         failure?(["error": ErrorConstants.genericErrorMessage as AnyObject])
+                    })
                 } else if let d = data {
                     do {
                         let jsonObject: Any = try JSONSerialization.jsonObject(with: d, options: .mutableContainers)
                         
                         if let jsonArray = jsonObject as? Array<AnyObject> {
                             let dictionary = ["JSON": jsonArray]
-                            success?(dictionary as [String: AnyObject])
+                            DispatchQueue.main.async(execute: { () -> Void in
+                                success?(dictionary as [String: AnyObject])
+                            })
                         } else if let jsonDictionary = jsonObject as? Dictionary<String, AnyObject> {
-                            success?(jsonDictionary)
+                            DispatchQueue.main.async(execute: { () -> Void in
+                                success?(jsonDictionary)
+                            })
                         }
                     } catch _ as NSError {
-                        failure?(["error": ErrorConstants.genericErrorMessage as AnyObject])
+                        DispatchQueue.main.async(execute: { () -> Void in
+                            failure?(["error": ErrorConstants.genericErrorMessage as AnyObject])
+                        })
                         
                     } catch {
-                        failure?(["error": ErrorConstants.genericErrorMessage as AnyObject])
+                        DispatchQueue.main.async(execute: { () -> Void in
+                            failure?(["error": ErrorConstants.genericErrorMessage as AnyObject])
+                        })
                         
                     }
                 }

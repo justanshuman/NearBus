@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreLocation
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        UIApplication.shared.isStatusBarHidden = false
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
+        
+        showAppHomeview()
+        
+        //API key of for GoogleMaps
+        GMSServices.provideAPIKey("AIzaSyCXOvfTo24r1B3x20scqNgfC7ANkhsPF34")
         return true
     }
 
@@ -44,3 +53,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate {
+    func showAppHomeview() {
+        let storyBoard = UIStoryboard(name: "HomePage", bundle:nil)
+        if let homeViewController = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController {
+            homeViewController.viewModel = HomeViewModel(view: homeViewController)
+            let navigationController = UINavigationController(rootViewController: homeViewController)
+            navigationController.navigationBar.backgroundColor = UIColor.nearBusBlackColor()
+            navigationController.navigationBar.isTranslucent = false
+            navigationController.navigationBar.barTintColor = UIColor.nearBusBlackColor()
+            navigationController.navigationBar.tintColor = UIColor.white
+            navigationController.navigationBar.titleTextAttributes = [
+                NSForegroundColorAttributeName : UIColor.white
+            ]
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = navigationController
+        }
+    }
+}
