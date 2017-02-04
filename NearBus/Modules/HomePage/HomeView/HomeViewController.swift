@@ -30,6 +30,7 @@ class HomeViewController: UIViewController, IHomeViewController {
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var loadingView: LoadingView!
     @IBOutlet weak var noBusStopsView: UIView!
+    @IBOutlet weak var dummyLocationButton: UIButton!
     
     var viewModel: IHomeViewModel?
     
@@ -50,6 +51,7 @@ class HomeViewController: UIViewController, IHomeViewController {
             self?.viewModel?.checkForAccess()
         }
         carMarkerImage = imageWithImage(image: UIImage(named: "carMarker")!, scaledToSize: CGSize(width: 30, height: 50))
+        dummyLocationButton.layer.cornerRadius = 5.0
     }
     
     /* Resize the car marker image, used because of huge size of dummy asset used as marker.
@@ -168,6 +170,10 @@ class HomeViewController: UIViewController, IHomeViewController {
     func removeAllMarkers() {
         busStopMarkers = []
         mapView.clear()
+    }
+    
+    @IBAction func gotoDummyLocation(sender: UIButton) {
+        viewModel?.setLocation(location: CLLocationCoordinate2D(latitude: 24.44072, longitude: 54.44392))
     }
     
     deinit {

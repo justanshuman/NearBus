@@ -93,8 +93,7 @@ class HomeViewModel: IHomeViewModel {
         view?.removeAllMarkers()
         nearByBusStops = []
         
-//        fetchNearbyBusStops(latitude: centerLocation.latitude, longitude: centerLocation.longitude, radius: radius)
-        fetchNearbyBusStops(latitude: 24.44072, longitude: 54.44392, radius: radius)
+        fetchNearbyBusStops(latitude: centerLocation.latitude, longitude: centerLocation.longitude, radius: radius)
     }
     
     func fetchNearbyBusStops(latitude: Double, longitude: Double, radius: Int) {

@@ -29,16 +29,29 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfS-X3-2hJ">
-                                        <rect key="frame" x="33.5" y="302.5" width="308" height="41"/>
+                                        <rect key="frame" x="34" y="303" width="308" height="41"/>
                                         <string key="text">Sorry! No bus stops found around you.
 Try increasing the radius.</string>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbV-OG-Tfe">
+                                        <rect key="frame" x="95.5" y="559" width="183" height="38"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <inset key="contentEdgeInsets" minX="15" minY="10" maxX="15" maxY="10"/>
+                                        <state key="normal" title="Goto Dummy Location">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="gotoDummyLocationWithSender:" destination="oas-2P-7ET" eventType="touchUpInside" id="Gwq-ZT-zHc"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.39679418103448277" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hbV-OG-Tfe" secondAttribute="bottom" constant="50" id="Cgu-4T-ADP"/>
+                                    <constraint firstItem="hbV-OG-Tfe" firstAttribute="centerX" secondItem="rpd-xk-knB" secondAttribute="centerX" id="IDf-er-swi"/>
                                     <constraint firstItem="IfS-X3-2hJ" firstAttribute="centerY" secondItem="rpd-xk-knB" secondAttribute="centerY" id="NU7-CT-MIe"/>
                                     <constraint firstItem="IfS-X3-2hJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rpd-xk-knB" secondAttribute="leading" constant="20" id="TVi-57-egR"/>
                                     <constraint firstItem="IfS-X3-2hJ" firstAttribute="centerX" secondItem="rpd-xk-knB" secondAttribute="centerX" id="mSH-2d-jVP"/>
@@ -67,6 +80,7 @@ Try increasing the radius.</string>
                     </view>
                     <navigationItem key="navigationItem" id="Kqq-u5-F9m"/>
                     <connections>
+                        <outlet property="dummyLocationButton" destination="hbV-OG-Tfe" id="MTF-yp-aTF"/>
                         <outlet property="loadingView" destination="0W8-IV-pVV" id="4L6-4R-eCB"/>
                         <outlet property="mapView" destination="bi1-w7-UVt" id="Sip-rS-i4l"/>
                         <outlet property="noBusStopsView" destination="rpd-xk-knB" id="Nag-s3-EqH"/>
