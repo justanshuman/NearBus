@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		340299371E45C32A00758564 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340299361E45C32A00758564 /* AppDelegate.swift */; };
+		340299391E45C32A00758564 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340299381E45C32A00758564 /* ViewController.swift */; };
+		3402993C1E45C32A00758564 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3402993A1E45C32A00758564 /* Main.storyboard */; };
+		3402993E1E45C32A00758564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3402993D1E45C32A00758564 /* Assets.xcassets */; };
+		340299411E45C32A00758564 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3402993F1E45C32A00758564 /* LaunchScreen.storyboard */; };
+		3402994C1E45C32A00758564 /* NearBusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402994B1E45C32A00758564 /* NearBusTests.swift */; };
+		340299571E45C32A00758564 /* NearBusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340299561E45C32A00758564 /* NearBusUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		340299481E45C32A00758564 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3402992B1E45C32A00758564 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 340299321E45C32A00758564;
+			remoteInfo = NearBus;
+		};
+		340299531E45C32A00758564 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3402992B1E45C32A00758564 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 340299321E45C32A00758564;
+			remoteInfo = NearBus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		340299331E45C32A00758564 /* NearBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		340299361E45C32A00758564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		340299381E45C32A00758564 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3402993B1E45C32A00758564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3402993D1E45C32A00758564 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		340299401E45C32A00758564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		340299421E45C32A00758564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		340299471E45C32A00758564 /* NearBusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearBusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3402994B1E45C32A00758564 /* NearBusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearBusTests.swift; sourceTree = "<group>"; };
+		3402994D1E45C32A00758564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		340299521E45C32A00758564 /* NearBusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearBusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		340299561E45C32A00758564 /* NearBusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearBusUITests.swift; sourceTree = "<group>"; };
+		340299581E45C32A00758564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		340299301E45C32A00758564 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		340299441E45C32A00758564 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3402994F1E45C32A00758564 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3402992A1E45C32A00758564 = {
+			isa = PBXGroup;
+			children = (
+				340299351E45C32A00758564 /* NearBus */,
+				3402994A1E45C32A00758564 /* NearBusTests */,
+				340299551E45C32A00758564 /* NearBusUITests */,
+				340299341E45C32A00758564 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		340299341E45C32A00758564 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				340299331E45C32A00758564 /* NearBus.app */,
+				340299471E45C32A00758564 /* NearBusTests.xctest */,
+				340299521E45C32A00758564 /* NearBusUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		340299351E45C32A00758564 /* NearBus */ = {
+			isa = PBXGroup;
+			children = (
+				340299361E45C32A00758564 /* AppDelegate.swift */,
+				340299381E45C32A00758564 /* ViewController.swift */,
+				3402993A1E45C32A00758564 /* Main.storyboard */,
+				3402993D1E45C32A00758564 /* Assets.xcassets */,
+				3402993F1E45C32A00758564 /* LaunchScreen.storyboard */,
+				340299421E45C32A00758564 /* Info.plist */,
+			);
+			path = NearBus;
+			sourceTree = "<group>";
+		};
+		3402994A1E45C32A00758564 /* NearBusTests */ = {
+			isa = PBXGroup;
+			children = (
+				3402994B1E45C32A00758564 /* NearBusTests.swift */,
+				3402994D1E45C32A00758564 /* Info.plist */,
+			);
+			path = NearBusTests;
+			sourceTree = "<group>";
+		};
+		340299551E45C32A00758564 /* NearBusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				340299561E45C32A00758564 /* NearBusUITests.swift */,
+				340299581E45C32A00758564 /* Info.plist */,
+			);
+			path = NearBusUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		340299321E45C32A00758564 /* NearBus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3402995B1E45C32A00758564 /* Build configuration list for PBXNativeTarget "NearBus" */;
+			buildPhases = (
+				3402992F1E45C32A00758564 /* Sources */,
+				340299301E45C32A00758564 /* Frameworks */,
+				340299311E45C32A00758564 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NearBus;
+			productName = NearBus;
+			productReference = 340299331E45C32A00758564 /* NearBus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		340299461E45C32A00758564 /* NearBusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3402995E1E45C32A00758564 /* Build configuration list for PBXNativeTarget "NearBusTests" */;
+			buildPhases = (
+				340299431E45C32A00758564 /* Sources */,
+				340299441E45C32A00758564 /* Frameworks */,
+				340299451E45C32A00758564 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				340299491E45C32A00758564 /* PBXTargetDependency */,
+			);
+			name = NearBusTests;
+			productName = NearBusTests;
+			productReference = 340299471E45C32A00758564 /* NearBusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		340299511E45C32A00758564 /* NearBusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 340299611E45C32A00758564 /* Build configuration list for PBXNativeTarget "NearBusUITests" */;
+			buildPhases = (
+				3402994E1E45C32A00758564 /* Sources */,
+				3402994F1E45C32A00758564 /* Frameworks */,
+				340299501E45C32A00758564 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				340299541E45C32A00758564 /* PBXTargetDependency */,
+			);
+			name = NearBusUITests;
+			productName = NearBusUITests;
+			productReference = 340299521E45C32A00758564 /* NearBusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3402992B1E45C32A00758564 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = wockito;
+				TargetAttributes = {
+					340299321E45C32A00758564 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = U7BF3EHPWC;
+						ProvisioningStyle = Automatic;
+					};
+					340299461E45C32A00758564 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = U7BF3EHPWC;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 340299321E45C32A00758564;
+					};
+					340299511E45C32A00758564 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = U7BF3EHPWC;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 340299321E45C32A00758564;
+					};
+				};
+			};
+			buildConfigurationList = 3402992E1E45C32A00758564 /* Build configuration list for PBXProject "NearBus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3402992A1E45C32A00758564;
+			productRefGroup = 340299341E45C32A00758564 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				340299321E45C32A00758564 /* NearBus */,
+				340299461E45C32A00758564 /* NearBusTests */,
+				340299511E45C32A00758564 /* NearBusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		340299311E45C32A00758564 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				340299411E45C32A00758564 /* LaunchScreen.storyboard in Resources */,
+				3402993E1E45C32A00758564 /* Assets.xcassets in Resources */,
+				3402993C1E45C32A00758564 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		340299451E45C32A00758564 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		340299501E45C32A00758564 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3402992F1E45C32A00758564 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				340299391E45C32A00758564 /* ViewController.swift in Sources */,
+				340299371E45C32A00758564 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		340299431E45C32A00758564 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3402994C1E45C32A00758564 /* NearBusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3402994E1E45C32A00758564 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				340299571E45C32A00758564 /* NearBusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		340299491E45C32A00758564 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 340299321E45C32A00758564 /* NearBus */;
+			targetProxy = 340299481E45C32A00758564 /* PBXContainerItemProxy */;
+		};
+		340299541E45C32A00758564 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 340299321E45C32A00758564 /* NearBus */;
+			targetProxy = 340299531E45C32A00758564 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3402993A1E45C32A00758564 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3402993B1E45C32A00758564 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3402993F1E45C32A00758564 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				340299401E45C32A00758564 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		340299591E45C32A00758564 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3402995A1E45C32A00758564 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3402995C1E45C32A00758564 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U7BF3EHPWC;
+				INFOPLIST_FILE = NearBus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wockito.NearBus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3402995D1E45C32A00758564 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U7BF3EHPWC;
+				INFOPLIST_FILE = NearBus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wockito.NearBus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		3402995F1E45C32A00758564 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = U7BF3EHPWC;
+				INFOPLIST_FILE = NearBusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wockito.NearBusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NearBus.app/NearBus";
+			};
+			name = Debug;
+		};
+		340299601E45C32A00758564 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = U7BF3EHPWC;
+				INFOPLIST_FILE = NearBusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wockito.NearBusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NearBus.app/NearBus";
+			};
+			name = Release;
+		};
+		340299621E45C32A00758564 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = U7BF3EHPWC;
+				INFOPLIST_FILE = NearBusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wockito.NearBusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = NearBus;
+			};
+			name = Debug;
+		};
+		340299631E45C32A00758564 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = U7BF3EHPWC;
+				INFOPLIST_FILE = NearBusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wockito.NearBusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = NearBus;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3402992E1E45C32A00758564 /* Build configuration list for PBXProject "NearBus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				340299591E45C32A00758564 /* Debug */,
+				3402995A1E45C32A00758564 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3402995B1E45C32A00758564 /* Build configuration list for PBXNativeTarget "NearBus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3402995C1E45C32A00758564 /* Debug */,
+				3402995D1E45C32A00758564 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3402995E1E45C32A00758564 /* Build configuration list for PBXNativeTarget "NearBusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3402995F1E45C32A00758564 /* Debug */,
+				340299601E45C32A00758564 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		340299611E45C32A00758564 /* Build configuration list for PBXNativeTarget "NearBusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				340299621E45C32A00758564 /* Debug */,
+				340299631E45C32A00758564 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3402992B1E45C32A00758564 /* Project object */;
+}
