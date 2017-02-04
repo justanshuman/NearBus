@@ -1,1585 +1,841 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>0A1FA852E6E80852AE822FA0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-NearBus/Pods-NearBus-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>0B235C3CF6522FCA335D6602</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [ $? != 0 ] ; then
-    # print error to STDERR
-    echo "error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation." &gt;&amp;2
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>3402992A1E45C32A00758564</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>340299351E45C32A00758564</string>
-				<string>3402994A1E45C32A00758564</string>
-				<string>340299551E45C32A00758564</string>
-				<string>340299341E45C32A00758564</string>
-				<string>6DAC6B744EAFC269CDC4CF28</string>
-				<string>F0BF0AE410BB476A1E86491C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3402992B1E45C32A00758564</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0820</string>
-				<key>LastUpgradeCheck</key>
-				<string>0820</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>wockito</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>340299321E45C32A00758564</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>8.2.1</string>
-						<key>DevelopmentTeam</key>
-						<string>U7BF3EHPWC</string>
-						<key>ProvisioningStyle</key>
-						<string>Automatic</string>
-					</dict>
-					<key>340299461E45C32A00758564</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>8.2.1</string>
-						<key>DevelopmentTeam</key>
-						<string>U7BF3EHPWC</string>
-						<key>ProvisioningStyle</key>
-						<string>Automatic</string>
-						<key>TestTargetID</key>
-						<string>340299321E45C32A00758564</string>
-					</dict>
-					<key>340299511E45C32A00758564</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>8.2.1</string>
-						<key>DevelopmentTeam</key>
-						<string>U7BF3EHPWC</string>
-						<key>ProvisioningStyle</key>
-						<string>Automatic</string>
-						<key>TestTargetID</key>
-						<string>340299321E45C32A00758564</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>3402992E1E45C32A00758564</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>3402992A1E45C32A00758564</string>
-			<key>productRefGroup</key>
-			<string>340299341E45C32A00758564</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>340299321E45C32A00758564</string>
-				<string>340299461E45C32A00758564</string>
-				<string>340299511E45C32A00758564</string>
-			</array>
-		</dict>
-		<key>3402992E1E45C32A00758564</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>340299591E45C32A00758564</string>
-				<string>3402995A1E45C32A00758564</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>3402992F1E45C32A00758564</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>340299391E45C32A00758564</string>
-				<string>340299371E45C32A00758564</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>340299301E45C32A00758564</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7CDC5B0391DE15F7C0ED1DB9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>340299311E45C32A00758564</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>340299751E45C84600758564</string>
-				<string>3402993C1E45C32A00758564</string>
-				<string>340299721E45C4F700758564</string>
-				<string>340299711E45C4F700758564</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>340299321E45C32A00758564</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>3402995B1E45C32A00758564</string>
-			<key>buildPhases</key>
-			<array>
-				<string>0B235C3CF6522FCA335D6602</string>
-				<string>3402992F1E45C32A00758564</string>
-				<string>340299301E45C32A00758564</string>
-				<string>340299311E45C32A00758564</string>
-				<string>DAF8C49A637425152C56616A</string>
-				<string>0A1FA852E6E80852AE822FA0</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>NearBus</string>
-			<key>productName</key>
-			<string>NearBus</string>
-			<key>productReference</key>
-			<string>340299331E45C32A00758564</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>340299331E45C32A00758564</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>NearBus.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>340299341E45C32A00758564</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>340299331E45C32A00758564</string>
-				<string>340299471E45C32A00758564</string>
-				<string>340299521E45C32A00758564</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>340299351E45C32A00758564</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>340299641E45C4F700758564</string>
-				<string>3402996E1E45C4F700758564</string>
-				<string>340299361E45C32A00758564</string>
-				<string>340299381E45C32A00758564</string>
-				<string>3402993A1E45C32A00758564</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>NearBus</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>340299361E45C32A00758564</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>340299371E45C32A00758564</key>
-		<dict>
-			<key>fileRef</key>
-			<string>340299361E45C32A00758564</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>340299381E45C32A00758564</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>340299391E45C32A00758564</key>
-		<dict>
-			<key>fileRef</key>
-			<string>340299381E45C32A00758564</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3402993A1E45C32A00758564</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3402993B1E45C32A00758564</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3402993B1E45C32A00758564</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3402993C1E45C32A00758564</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3402993A1E45C32A00758564</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>340299431E45C32A00758564</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>3402994C1E45C32A00758564</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>340299441E45C32A00758564</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>70C42C7EB42DCF46120440AC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>340299451E45C32A00758564</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>340299461E45C32A00758564</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>3402995E1E45C32A00758564</string>
-			<key>buildPhases</key>
-			<array>
-				<string>7653736E189C770FC84A7AFF</string>
-				<string>340299431E45C32A00758564</string>
-				<string>340299441E45C32A00758564</string>
-				<string>340299451E45C32A00758564</string>
-				<string>546B2B11502389FAD900003D</string>
-				<string>E3BFB773457CDFFD6ED09E71</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>340299491E45C32A00758564</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>NearBusTests</string>
-			<key>productName</key>
-			<string>NearBusTests</string>
-			<key>productReference</key>
-			<string>340299471E45C32A00758564</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>340299471E45C32A00758564</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>NearBusTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>340299481E45C32A00758564</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>3402992B1E45C32A00758564</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>340299321E45C32A00758564</string>
-			<key>remoteInfo</key>
-			<string>NearBus</string>
-		</dict>
-		<key>340299491E45C32A00758564</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>340299321E45C32A00758564</string>
-			<key>targetProxy</key>
-			<string>340299481E45C32A00758564</string>
-		</dict>
-		<key>3402994A1E45C32A00758564</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3402994B1E45C32A00758564</string>
-				<string>3402994D1E45C32A00758564</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>NearBusTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3402994B1E45C32A00758564</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>NearBusTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3402994C1E45C32A00758564</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3402994B1E45C32A00758564</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3402994D1E45C32A00758564</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3402994E1E45C32A00758564</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>340299571E45C32A00758564</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>3402994F1E45C32A00758564</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D6AE3B9616CCE7BA1AF42FEC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>340299501E45C32A00758564</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>340299511E45C32A00758564</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>340299611E45C32A00758564</string>
-			<key>buildPhases</key>
-			<array>
-				<string>536C132837534588EACAA2CB</string>
-				<string>3402994E1E45C32A00758564</string>
-				<string>3402994F1E45C32A00758564</string>
-				<string>340299501E45C32A00758564</string>
-				<string>A79158109FAED78E6FFBB7FE</string>
-				<string>FACF579285A30B7DFBAEF9F1</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>340299541E45C32A00758564</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>NearBusUITests</string>
-			<key>productName</key>
-			<string>NearBusUITests</string>
-			<key>productReference</key>
-			<string>340299521E45C32A00758564</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.ui-testing</string>
-		</dict>
-		<key>340299521E45C32A00758564</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>NearBusUITests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>340299531E45C32A00758564</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>3402992B1E45C32A00758564</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>340299321E45C32A00758564</string>
-			<key>remoteInfo</key>
-			<string>NearBus</string>
-		</dict>
-		<key>340299541E45C32A00758564</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>340299321E45C32A00758564</string>
-			<key>targetProxy</key>
-			<string>340299531E45C32A00758564</string>
-		</dict>
-		<key>340299551E45C32A00758564</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>340299561E45C32A00758564</string>
-				<string>340299581E45C32A00758564</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>NearBusUITests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>340299561E45C32A00758564</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>NearBusUITests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>340299571E45C32A00758564</key>
-		<dict>
-			<key>fileRef</key>
-			<string>340299561E45C32A00758564</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>340299581E45C32A00758564</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>340299591E45C32A00758564</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.2</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_ACTIVE_COMPILATION_CONDITIONS</key>
-				<string>DEBUG</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>3402995A1E45C32A00758564</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.2</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Owholemodule</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>3402995B1E45C32A00758564</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>3402995C1E45C32A00758564</string>
-				<string>3402995D1E45C32A00758564</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>3402995C1E45C32A00758564</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>BC7FA78A6C0C913AD08638DA</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>U7BF3EHPWC</string>
-				<key>INFOPLIST_FILE</key>
-				<string>NearBus/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.1</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.wockito.NearBus</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>3402995D1E45C32A00758564</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>FDF0255BBB35F02D48435830</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>U7BF3EHPWC</string>
-				<key>INFOPLIST_FILE</key>
-				<string>NearBus/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.1</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.wockito.NearBus</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>3402995E1E45C32A00758564</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>3402995F1E45C32A00758564</string>
-				<string>340299601E45C32A00758564</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>3402995F1E45C32A00758564</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>747AD4482260546468B9EC78</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
-				<string>YES</string>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>U7BF3EHPWC</string>
-				<key>INFOPLIST_FILE</key>
-				<string>NearBusTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.wockito.NearBusTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/NearBus.app/NearBus</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>340299601E45C32A00758564</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>94B8F10026E9BB7E5A022322</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
-				<string>YES</string>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>U7BF3EHPWC</string>
-				<key>INFOPLIST_FILE</key>
-				<string>NearBusTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.wockito.NearBusTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/NearBus.app/NearBus</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>340299611E45C32A00758564</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>340299621E45C32A00758564</string>
-				<string>340299631E45C32A00758564</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>340299621E45C32A00758564</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>39C24577E40507DDB1616976</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
-				<string>YES</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>U7BF3EHPWC</string>
-				<key>INFOPLIST_FILE</key>
-				<string>NearBusUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.wockito.NearBusUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>NearBus</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>340299631E45C32A00758564</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>6EDEC87F4AD6B42ABB5A04E9</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
-				<string>YES</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>U7BF3EHPWC</string>
-				<key>INFOPLIST_FILE</key>
-				<string>NearBusUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.wockito.NearBusUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>NearBus</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>340299641E45C4F700758564</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>340299671E45C4F700758564</string>
-				<string>3402996C1E45C4F700758564</string>
-				<string>3402996B1E45C4F700758564</string>
-				<string>340299651E45C4F700758564</string>
-				<string>340299661E45C4F700758564</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Modules</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>340299651E45C4F700758564</key>
-		<dict>
-			<key>children</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>BusRoutePage</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>340299661E45C4F700758564</key>
-		<dict>
-			<key>children</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>BusStopPage</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>340299671E45C4F700758564</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>340299681E45C4F700758564</string>
-				<string>340299691E45C4F700758564</string>
-				<string>3402996A1E45C4F700758564</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Common</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>340299681E45C4F700758564</key>
-		<dict>
-			<key>children</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Constants</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>340299691E45C4F700758564</key>
-		<dict>
-			<key>children</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Network</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3402996A1E45C4F700758564</key>
-		<dict>
-			<key>children</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Utils</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3402996B1E45C4F700758564</key>
-		<dict>
-			<key>children</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>HomePage</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3402996C1E45C4F700758564</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3402996D1E45C4F700758564</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>LandingPage</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3402996D1E45C4F700758564</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>path</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3402996E1E45C4F700758564</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3402996F1E45C4F700758564</string>
-				<string>340299741E45C84600758564</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Resources</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3402996F1E45C4F700758564</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>340299711E45C4F700758564</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3402996D1E45C4F700758564</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>340299721E45C4F700758564</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3402996F1E45C4F700758564</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>340299741E45C84600758564</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>name</key>
-			<string>Info.plist</string>
-			<key>path</key>
-			<string>../Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>340299751E45C84600758564</key>
-		<dict>
-			<key>fileRef</key>
-			<string>340299741E45C84600758564</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>39C24577E40507DDB1616976</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-NearBusUITests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-NearBusUITests/Pods-NearBusUITests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3CEC79B2C63F7EBDA7230125</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_NearBusTests.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>536C132837534588EACAA2CB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [ $? != 0 ] ; then
-    # print error to STDERR
-    echo "error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation." &gt;&amp;2
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>546B2B11502389FAD900003D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-NearBusTests/Pods-NearBusTests-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>64C855BAC65EAD1777BFA318</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_NearBus.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>6DAC6B744EAFC269CDC4CF28</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BC7FA78A6C0C913AD08638DA</string>
-				<string>FDF0255BBB35F02D48435830</string>
-				<string>747AD4482260546468B9EC78</string>
-				<string>94B8F10026E9BB7E5A022322</string>
-				<string>39C24577E40507DDB1616976</string>
-				<string>6EDEC87F4AD6B42ABB5A04E9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6EDEC87F4AD6B42ABB5A04E9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-NearBusUITests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-NearBusUITests/Pods-NearBusUITests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>70C42C7EB42DCF46120440AC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3CEC79B2C63F7EBDA7230125</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>747AD4482260546468B9EC78</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-NearBusTests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-NearBusTests/Pods-NearBusTests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7653736E189C770FC84A7AFF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [ $? != 0 ] ; then
-    # print error to STDERR
-    echo "error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation." &gt;&amp;2
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>7CDC5B0391DE15F7C0ED1DB9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>64C855BAC65EAD1777BFA318</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>94B8F10026E9BB7E5A022322</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-NearBusTests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-NearBusTests/Pods-NearBusTests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A79158109FAED78E6FFBB7FE</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-NearBusUITests/Pods-NearBusUITests-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>B7899B77249949870CDAF66A</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_NearBusUITests.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>BC7FA78A6C0C913AD08638DA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-NearBus.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-NearBus/Pods-NearBus.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D6AE3B9616CCE7BA1AF42FEC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B7899B77249949870CDAF66A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DAF8C49A637425152C56616A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-NearBus/Pods-NearBus-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>E3BFB773457CDFFD6ED09E71</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-NearBusTests/Pods-NearBusTests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>F0BF0AE410BB476A1E86491C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>64C855BAC65EAD1777BFA318</string>
-				<string>3CEC79B2C63F7EBDA7230125</string>
-				<string>B7899B77249949870CDAF66A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FACF579285A30B7DFBAEF9F1</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-NearBusUITests/Pods-NearBusUITests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>FDF0255BBB35F02D48435830</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-NearBus.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-NearBus/Pods-NearBus.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>3402992B1E45C32A00758564</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		340299371E45C32A00758564 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340299361E45C32A00758564 /* AppDelegate.swift */; };
+		340299391E45C32A00758564 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340299381E45C32A00758564 /* ViewController.swift */; };
+		3402993C1E45C32A00758564 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3402993A1E45C32A00758564 /* Main.storyboard */; };
+		3402994C1E45C32A00758564 /* NearBusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402994B1E45C32A00758564 /* NearBusTests.swift */; };
+		340299571E45C32A00758564 /* NearBusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340299561E45C32A00758564 /* NearBusUITests.swift */; };
+		340299711E45C4F700758564 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3402996D1E45C4F700758564 /* LaunchScreen.storyboard */; };
+		340299721E45C4F700758564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3402996F1E45C4F700758564 /* Assets.xcassets */; };
+		340299751E45C84600758564 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 340299741E45C84600758564 /* Info.plist */; };
+		340299771E46043D00758564 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340299761E46043D00758564 /* APIEndpoints.swift */; };
+		340299791E46083A00758564 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340299781E46083A00758564 /* APIController.swift */; };
+		3402997B1E460A3300758564 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402997A1E460A3300758564 /* AppConstants.swift */; };
+		3402997D1E460A4700758564 /* ErrorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402997C1E460A4700758564 /* ErrorConstants.swift */; };
+		340299801E4610AA00758564 /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402997F1E4610AA00758564 /* BusStop.swift */; };
+		340299821E4612F500758564 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340299811E4612F500758564 /* Extensions.swift */; };
+		70C42C7EB42DCF46120440AC /* Pods_NearBusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CEC79B2C63F7EBDA7230125 /* Pods_NearBusTests.framework */; };
+		7CDC5B0391DE15F7C0ED1DB9 /* Pods_NearBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C855BAC65EAD1777BFA318 /* Pods_NearBus.framework */; };
+		D6AE3B9616CCE7BA1AF42FEC /* Pods_NearBusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7899B77249949870CDAF66A /* Pods_NearBusUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		340299481E45C32A00758564 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3402992B1E45C32A00758564 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 340299321E45C32A00758564;
+			remoteInfo = NearBus;
+		};
+		340299531E45C32A00758564 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3402992B1E45C32A00758564 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 340299321E45C32A00758564;
+			remoteInfo = NearBus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		340299331E45C32A00758564 /* NearBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		340299361E45C32A00758564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		340299381E45C32A00758564 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3402993B1E45C32A00758564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		340299471E45C32A00758564 /* NearBusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearBusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3402994B1E45C32A00758564 /* NearBusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearBusTests.swift; sourceTree = "<group>"; };
+		3402994D1E45C32A00758564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		340299521E45C32A00758564 /* NearBusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearBusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		340299561E45C32A00758564 /* NearBusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearBusUITests.swift; sourceTree = "<group>"; };
+		340299581E45C32A00758564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3402996D1E45C4F700758564 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3402996F1E45C4F700758564 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		340299741E45C84600758564 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		340299761E46043D00758564 /* APIEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		340299781E46083A00758564 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		3402997A1E460A3300758564 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		3402997C1E460A4700758564 /* ErrorConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorConstants.swift; sourceTree = "<group>"; };
+		3402997F1E4610AA00758564 /* BusStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStop.swift; sourceTree = "<group>"; };
+		340299811E4612F500758564 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		39C24577E40507DDB1616976 /* Pods-NearBusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearBusUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NearBusUITests/Pods-NearBusUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3CEC79B2C63F7EBDA7230125 /* Pods_NearBusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NearBusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64C855BAC65EAD1777BFA318 /* Pods_NearBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NearBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EDEC87F4AD6B42ABB5A04E9 /* Pods-NearBusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearBusUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NearBusUITests/Pods-NearBusUITests.release.xcconfig"; sourceTree = "<group>"; };
+		747AD4482260546468B9EC78 /* Pods-NearBusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearBusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NearBusTests/Pods-NearBusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		94B8F10026E9BB7E5A022322 /* Pods-NearBusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearBusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NearBusTests/Pods-NearBusTests.release.xcconfig"; sourceTree = "<group>"; };
+		B7899B77249949870CDAF66A /* Pods_NearBusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NearBusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC7FA78A6C0C913AD08638DA /* Pods-NearBus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearBus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NearBus/Pods-NearBus.debug.xcconfig"; sourceTree = "<group>"; };
+		FDF0255BBB35F02D48435830 /* Pods-NearBus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearBus.release.xcconfig"; path = "Pods/Target Support Files/Pods-NearBus/Pods-NearBus.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		340299301E45C32A00758564 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CDC5B0391DE15F7C0ED1DB9 /* Pods_NearBus.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		340299441E45C32A00758564 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70C42C7EB42DCF46120440AC /* Pods_NearBusTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3402994F1E45C32A00758564 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6AE3B9616CCE7BA1AF42FEC /* Pods_NearBusUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3402992A1E45C32A00758564 = {
+			isa = PBXGroup;
+			children = (
+				340299351E45C32A00758564 /* NearBus */,
+				3402994A1E45C32A00758564 /* NearBusTests */,
+				340299551E45C32A00758564 /* NearBusUITests */,
+				340299341E45C32A00758564 /* Products */,
+				6DAC6B744EAFC269CDC4CF28 /* Pods */,
+				F0BF0AE410BB476A1E86491C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		340299341E45C32A00758564 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				340299331E45C32A00758564 /* NearBus.app */,
+				340299471E45C32A00758564 /* NearBusTests.xctest */,
+				340299521E45C32A00758564 /* NearBusUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		340299351E45C32A00758564 /* NearBus */ = {
+			isa = PBXGroup;
+			children = (
+				3402997E1E460FBB00758564 /* Models */,
+				340299641E45C4F700758564 /* Modules */,
+				3402996E1E45C4F700758564 /* Resources */,
+				340299361E45C32A00758564 /* AppDelegate.swift */,
+				340299381E45C32A00758564 /* ViewController.swift */,
+				3402993A1E45C32A00758564 /* Main.storyboard */,
+			);
+			path = NearBus;
+			sourceTree = "<group>";
+		};
+		3402994A1E45C32A00758564 /* NearBusTests */ = {
+			isa = PBXGroup;
+			children = (
+				3402994B1E45C32A00758564 /* NearBusTests.swift */,
+				3402994D1E45C32A00758564 /* Info.plist */,
+			);
+			path = NearBusTests;
+			sourceTree = "<group>";
+		};
+		340299551E45C32A00758564 /* NearBusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				340299561E45C32A00758564 /* NearBusUITests.swift */,
+				340299581E45C32A00758564 /* Info.plist */,
+			);
+			path = NearBusUITests;
+			sourceTree = "<group>";
+		};
+		340299641E45C4F700758564 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				340299671E45C4F700758564 /* Common */,
+				3402996C1E45C4F700758564 /* LandingPage */,
+				3402996B1E45C4F700758564 /* HomePage */,
+				340299651E45C4F700758564 /* BusRoutePage */,
+				340299661E45C4F700758564 /* BusStopPage */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		340299651E45C4F700758564 /* BusRoutePage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BusRoutePage;
+			sourceTree = "<group>";
+		};
+		340299661E45C4F700758564 /* BusStopPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BusStopPage;
+			sourceTree = "<group>";
+		};
+		340299671E45C4F700758564 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				340299681E45C4F700758564 /* Constants */,
+				340299691E45C4F700758564 /* Network */,
+				3402996A1E45C4F700758564 /* Utils */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		340299681E45C4F700758564 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3402997A1E460A3300758564 /* AppConstants.swift */,
+				3402997C1E460A4700758564 /* ErrorConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		340299691E45C4F700758564 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				340299761E46043D00758564 /* APIEndpoints.swift */,
+				340299781E46083A00758564 /* APIController.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3402996A1E45C4F700758564 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				340299811E4612F500758564 /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3402996B1E45C4F700758564 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		3402996C1E45C4F700758564 /* LandingPage */ = {
+			isa = PBXGroup;
+			children = (
+				3402996D1E45C4F700758564 /* LaunchScreen.storyboard */,
+			);
+			path = LandingPage;
+			sourceTree = "<group>";
+		};
+		3402996E1E45C4F700758564 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3402996F1E45C4F700758564 /* Assets.xcassets */,
+				340299741E45C84600758564 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3402997E1E460FBB00758564 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3402997F1E4610AA00758564 /* BusStop.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6DAC6B744EAFC269CDC4CF28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC7FA78A6C0C913AD08638DA /* Pods-NearBus.debug.xcconfig */,
+				FDF0255BBB35F02D48435830 /* Pods-NearBus.release.xcconfig */,
+				747AD4482260546468B9EC78 /* Pods-NearBusTests.debug.xcconfig */,
+				94B8F10026E9BB7E5A022322 /* Pods-NearBusTests.release.xcconfig */,
+				39C24577E40507DDB1616976 /* Pods-NearBusUITests.debug.xcconfig */,
+				6EDEC87F4AD6B42ABB5A04E9 /* Pods-NearBusUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F0BF0AE410BB476A1E86491C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64C855BAC65EAD1777BFA318 /* Pods_NearBus.framework */,
+				3CEC79B2C63F7EBDA7230125 /* Pods_NearBusTests.framework */,
+				B7899B77249949870CDAF66A /* Pods_NearBusUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		340299321E45C32A00758564 /* NearBus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3402995B1E45C32A00758564 /* Build configuration list for PBXNativeTarget "NearBus" */;
+			buildPhases = (
+				0B235C3CF6522FCA335D6602 /* [CP] Check Pods Manifest.lock */,
+				3402992F1E45C32A00758564 /* Sources */,
+				340299301E45C32A00758564 /* Frameworks */,
+				340299311E45C32A00758564 /* Resources */,
+				DAF8C49A637425152C56616A /* [CP] Embed Pods Frameworks */,
+				0A1FA852E6E80852AE822FA0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NearBus;
+			productName = NearBus;
+			productReference = 340299331E45C32A00758564 /* NearBus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		340299461E45C32A00758564 /* NearBusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3402995E1E45C32A00758564 /* Build configuration list for PBXNativeTarget "NearBusTests" */;
+			buildPhases = (
+				7653736E189C770FC84A7AFF /* [CP] Check Pods Manifest.lock */,
+				340299431E45C32A00758564 /* Sources */,
+				340299441E45C32A00758564 /* Frameworks */,
+				340299451E45C32A00758564 /* Resources */,
+				546B2B11502389FAD900003D /* [CP] Embed Pods Frameworks */,
+				E3BFB773457CDFFD6ED09E71 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				340299491E45C32A00758564 /* PBXTargetDependency */,
+			);
+			name = NearBusTests;
+			productName = NearBusTests;
+			productReference = 340299471E45C32A00758564 /* NearBusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		340299511E45C32A00758564 /* NearBusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 340299611E45C32A00758564 /* Build configuration list for PBXNativeTarget "NearBusUITests" */;
+			buildPhases = (
+				536C132837534588EACAA2CB /* [CP] Check Pods Manifest.lock */,
+				3402994E1E45C32A00758564 /* Sources */,
+				3402994F1E45C32A00758564 /* Frameworks */,
+				340299501E45C32A00758564 /* Resources */,
+				A79158109FAED78E6FFBB7FE /* [CP] Embed Pods Frameworks */,
+				FACF579285A30B7DFBAEF9F1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				340299541E45C32A00758564 /* PBXTargetDependency */,
+			);
+			name = NearBusUITests;
+			productName = NearBusUITests;
+			productReference = 340299521E45C32A00758564 /* NearBusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3402992B1E45C32A00758564 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = wockito;
+				TargetAttributes = {
+					340299321E45C32A00758564 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = U7BF3EHPWC;
+						ProvisioningStyle = Automatic;
+					};
+					340299461E45C32A00758564 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = U7BF3EHPWC;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 340299321E45C32A00758564;
+					};
+					340299511E45C32A00758564 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = U7BF3EHPWC;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 340299321E45C32A00758564;
+					};
+				};
+			};
+			buildConfigurationList = 3402992E1E45C32A00758564 /* Build configuration list for PBXProject "NearBus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3402992A1E45C32A00758564;
+			productRefGroup = 340299341E45C32A00758564 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				340299321E45C32A00758564 /* NearBus */,
+				340299461E45C32A00758564 /* NearBusTests */,
+				340299511E45C32A00758564 /* NearBusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		340299311E45C32A00758564 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				340299751E45C84600758564 /* Info.plist in Resources */,
+				3402993C1E45C32A00758564 /* Main.storyboard in Resources */,
+				340299721E45C4F700758564 /* Assets.xcassets in Resources */,
+				340299711E45C4F700758564 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		340299451E45C32A00758564 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		340299501E45C32A00758564 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A1FA852E6E80852AE822FA0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NearBus/Pods-NearBus-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0B235C3CF6522FCA335D6602 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		536C132837534588EACAA2CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		546B2B11502389FAD900003D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NearBusTests/Pods-NearBusTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7653736E189C770FC84A7AFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A79158109FAED78E6FFBB7FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NearBusUITests/Pods-NearBusUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAF8C49A637425152C56616A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NearBus/Pods-NearBus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3BFB773457CDFFD6ED09E71 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NearBusTests/Pods-NearBusTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FACF579285A30B7DFBAEF9F1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NearBusUITests/Pods-NearBusUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3402992F1E45C32A00758564 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				340299791E46083A00758564 /* APIController.swift in Sources */,
+				340299771E46043D00758564 /* APIEndpoints.swift in Sources */,
+				340299391E45C32A00758564 /* ViewController.swift in Sources */,
+				340299821E4612F500758564 /* Extensions.swift in Sources */,
+				340299801E4610AA00758564 /* BusStop.swift in Sources */,
+				340299371E45C32A00758564 /* AppDelegate.swift in Sources */,
+				3402997D1E460A4700758564 /* ErrorConstants.swift in Sources */,
+				3402997B1E460A3300758564 /* AppConstants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		340299431E45C32A00758564 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3402994C1E45C32A00758564 /* NearBusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3402994E1E45C32A00758564 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				340299571E45C32A00758564 /* NearBusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		340299491E45C32A00758564 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 340299321E45C32A00758564 /* NearBus */;
+			targetProxy = 340299481E45C32A00758564 /* PBXContainerItemProxy */;
+		};
+		340299541E45C32A00758564 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 340299321E45C32A00758564 /* NearBus */;
+			targetProxy = 340299531E45C32A00758564 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3402993A1E45C32A00758564 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3402993B1E45C32A00758564 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		340299591E45C32A00758564 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3402995A1E45C32A00758564 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3402995C1E45C32A00758564 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC7FA78A6C0C913AD08638DA /* Pods-NearBus.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U7BF3EHPWC;
+				INFOPLIST_FILE = NearBus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wockito.NearBus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3402995D1E45C32A00758564 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDF0255BBB35F02D48435830 /* Pods-NearBus.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U7BF3EHPWC;
+				INFOPLIST_FILE = NearBus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wockito.NearBus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		3402995F1E45C32A00758564 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 747AD4482260546468B9EC78 /* Pods-NearBusTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = U7BF3EHPWC;
+				INFOPLIST_FILE = NearBusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wockito.NearBusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NearBus.app/NearBus";
+			};
+			name = Debug;
+		};
+		340299601E45C32A00758564 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94B8F10026E9BB7E5A022322 /* Pods-NearBusTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = U7BF3EHPWC;
+				INFOPLIST_FILE = NearBusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wockito.NearBusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NearBus.app/NearBus";
+			};
+			name = Release;
+		};
+		340299621E45C32A00758564 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39C24577E40507DDB1616976 /* Pods-NearBusUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = U7BF3EHPWC;
+				INFOPLIST_FILE = NearBusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wockito.NearBusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = NearBus;
+			};
+			name = Debug;
+		};
+		340299631E45C32A00758564 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EDEC87F4AD6B42ABB5A04E9 /* Pods-NearBusUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = U7BF3EHPWC;
+				INFOPLIST_FILE = NearBusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wockito.NearBusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = NearBus;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3402992E1E45C32A00758564 /* Build configuration list for PBXProject "NearBus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				340299591E45C32A00758564 /* Debug */,
+				3402995A1E45C32A00758564 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3402995B1E45C32A00758564 /* Build configuration list for PBXNativeTarget "NearBus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3402995C1E45C32A00758564 /* Debug */,
+				3402995D1E45C32A00758564 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3402995E1E45C32A00758564 /* Build configuration list for PBXNativeTarget "NearBusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3402995F1E45C32A00758564 /* Debug */,
+				340299601E45C32A00758564 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		340299611E45C32A00758564 /* Build configuration list for PBXNativeTarget "NearBusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				340299621E45C32A00758564 /* Debug */,
+				340299631E45C32A00758564 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3402992B1E45C32A00758564 /* Project object */;
+}
