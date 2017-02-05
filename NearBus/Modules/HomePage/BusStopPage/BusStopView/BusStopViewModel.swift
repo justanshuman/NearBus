@@ -38,7 +38,7 @@ class BusStopViewModel: IBusStopViewModel {
     /* Called when view is loaded. Do the setup of view here
      */
     func hookUpView() {
-        view?.setTitle(title: busStop.name ?? "BusStop")
+        view?.setTitle(title: "Busses")
         getAllBusses()
     }
     

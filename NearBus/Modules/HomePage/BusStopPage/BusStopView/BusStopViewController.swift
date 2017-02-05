@@ -113,7 +113,7 @@ extension BusStopViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 75
+        return 60
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -122,16 +122,12 @@ extension BusStopViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view: UIView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 44))
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor(red: 242, green: 242, blue: 242)
         let label: UILabel = UILabel(frame: CGRect(x: 10, y: 13,width: UIScreen.main.bounds.width - 10, height: 18))
         label.textColor = UIColor.darkGray
-        label.backgroundColor = UIColor.white
-        label.font = UIFont.systemFont(ofSize: 15)
-        label.text = "Select bus to get Route"
-        view.layer.shadowColor = UIColor.gray.cgColor
-        view.layer.shadowRadius = 1.5
-        view.layer.shadowOpacity = 0.3
-        view.layer.shadowOffset = CGSize(width: 0, height: 0)
+        label.backgroundColor = UIColor.clear
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.text = "SELECT BUS"
         view.addSubview(label)
         return view
     }

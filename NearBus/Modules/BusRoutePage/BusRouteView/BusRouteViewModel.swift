@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreLocation
+import GoogleMaps
 
 protocol IBusRouteViewModel {
     func hookUpView()
@@ -22,6 +23,7 @@ class BusRouteViewModel: IBusRouteViewModel {
     weak var view: IBusRouteViewController?
     var bus : Bus
     let location: CLLocationCoordinate2D
+    var markers = [GMSMarker]()
     
     /* Initializer for BusRouteViewModel, takes in View and a Bus whose route is to be shown.
     */
@@ -119,6 +121,15 @@ class BusRouteViewModel: IBusRouteViewModel {
         view?.setUpBusInfo(number: bus.busNumber ?? "-", name: bus.name ?? "-", description: bus.description ?? "-", destination: bus.destination ?? "-")
         if points.count > 0 {
             view?.setupMapCameraCenterTo(location: points[0])
+            
+            let marker1 = GMSMarker(position: points.first!)
+            view?.addMarker(marker: marker1)
+            markers.append(marker1)
+            let marker2 = GMSMarker(position: points.last!)
+            view?.addMarker(marker: marker2)
+            markers.append(marker2)
+
+            
             view?.toggleRouteNotFoundView(show: false)
         } else {
             view?.toggleRouteNotFoundView(show: true)

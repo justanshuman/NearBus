@@ -121,8 +121,7 @@ class HomeViewModel: IHomeViewModel {
                     if stops.count > 0 {
                         self?.markBusStopsOnMap(busStops: stops)
                         self?.view?.toggleNoBusStopsView(show: false)
-                        //Stop listening for location once bus stops have been fetched.
-                        self?.view?.removeObserverForLocationChange()
+                        
                     } else {
                         self?.view?.toggleNoBusStopsView(show: true)
                     }
@@ -153,6 +152,7 @@ class HomeViewModel: IHomeViewModel {
             if let location = stop.location {
                 let marker = GMSMarker(position: location)
                 marker.title = "\(stop.name ?? "")"
+                marker.snippet = "Bus Stop"
                 view?.markBusStop(marker: marker)
                 busStopMarkers.append(marker)
 

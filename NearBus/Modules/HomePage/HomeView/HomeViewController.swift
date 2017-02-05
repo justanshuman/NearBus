@@ -38,6 +38,7 @@ class HomeViewController: UIViewController, IHomeViewController {
     
     private var locationManager = CLLocationManager()
     private var foregroundNotification: NSObjectProtocol?
+    var isListeningToLocation = true
     
     //Declaring UImage as class var and reusing the same for each marker to improve GoogleMaps performance
     private var carMarkerImage: UIImage?
@@ -53,7 +54,7 @@ class HomeViewController: UIViewController, IHomeViewController {
             self?.viewModel?.checkForAccess()
         }
         self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "", style: .done, target: nil, action: nil)
-        carMarkerImage = imageWithImage(image: UIImage(named: "carMarker")!, scaledToSize: CGSize(width: 40, height: 60))
+        carMarkerImage = imageWithImage(image: UIImage(named: "carMarker")!, scaledToSize: CGSize(width: 22, height: 35))
         dummyLocationButton.layer.cornerRadius = 5.0
     }
     
@@ -102,6 +103,9 @@ class HomeViewController: UIViewController, IHomeViewController {
         alertController.addAction(UIAlertAction(title: "1500", style: .default) { action in
             self.viewModel?.setRadius(value: 1500)
         })
+        alertController.addAction(UIAlertAction(title: "2000", style: .default) { action in
+            self.viewModel?.setRadius(value: 2000)
+        })
         if let popoverController = alertController.popoverPresentationController {
             popoverController.barButtonItem = sender
         }
@@ -126,6 +130,7 @@ class HomeViewController: UIViewController, IHomeViewController {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if let myLocation = change?[NSKeyValueChangeKey.newKey] as? CLLocation {
             viewModel?.setLocation(location: myLocation.coordinate)
+            removeObserverForLocationChange()
         }
     }
     
@@ -145,10 +150,13 @@ class HomeViewController: UIViewController, IHomeViewController {
         }
     }
     
-    /* Stop monitring user location after his initial location is obtained.
+    /* Stop monitring user location after bus stop list is fetched.
      */
     func removeObserverForLocationChange() {
-        mapView.removeObserver(self, forKeyPath: "myLocation", context: nil)
+        if isListeningToLocation {
+            isListeningToLocation = false
+            mapView.removeObserver(self, forKeyPath: "myLocation", context: nil)
+        }
     }
     
     /* Configure and show a bus stop.
@@ -171,7 +179,6 @@ class HomeViewController: UIViewController, IHomeViewController {
     func markBusStop(marker: GMSMarker) {
         marker.icon = carMarkerImage
         marker.map = mapView
-        marker.snippet = "Tap here for more Info"
     }
     
     /* Remove all bus stop markers when user changes location.
