@@ -17,9 +17,10 @@ protocol IHomeViewController: class {
     func toggleMapsMyLocationButton(show: Bool)
     func toggleLoadingView(show: Bool)
     func showErrorMessage(title: String?, message: String?, actionTitle: String?, completionBlock: (() -> Void)?)
-    func markBusStop(location: CLLocationCoordinate2D, name: String)
+    func markBusStop(marker: GMSMarker)
     func toggleNoBusStopsView(show: Bool)
     func removeAllMarkers()
+    func showBusStopViewController(busStop: BusStop)
 }
 
 
@@ -36,10 +37,10 @@ class HomeViewController: UIViewController, IHomeViewController {
     
     private var locationManager = CLLocationManager()
     private var foregroundNotification: NSObjectProtocol?
-    var busStopMarkers = [GMSMarker]()
     
     //Declaring UImage as class var and reusing the same for each marker to improve GoogleMaps performance
     private var carMarkerImage: UIImage?
+    private var dummyLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 24.44072, longitude: 54.44392)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +51,8 @@ class HomeViewController: UIViewController, IHomeViewController {
             [weak self] notification in
             self?.viewModel?.checkForAccess()
         }
-        carMarkerImage = imageWithImage(image: UIImage(named: "carMarker")!, scaledToSize: CGSize(width: 30, height: 50))
+        self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "", style: .done, target: nil, action: nil)
+        carMarkerImage = imageWithImage(image: UIImage(named: "carMarker")!, scaledToSize: CGSize(width: 40, height: 60))
         dummyLocationButton.layer.cornerRadius = 5.0
     }
     
@@ -76,13 +78,17 @@ class HomeViewController: UIViewController, IHomeViewController {
         mapView.camera = camera
     }
 
+    /* Adds a Radius button on right side of Navigation bar, this button can be used to change Radius in which the bus stops will be searched.
+     */
     func addSelectRadiusButton() {
         let rightBarButtonItem = UIBarButtonItem(title: "Radius", style: .plain, target: self, action: #selector(radiusButtonPressed))
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
+    /* Handler for the radius button on navigation bar
+     */
     func radiusButtonPressed(sender: UIBarButtonItem) {
-        let alertController = UIAlertController(title: "Select Radius", message: nil, preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "Select Radius", message: "Bus stops will be searched in this radius around your location.", preferredStyle: .actionSheet)
         alertController.addAction(UIAlertAction(title: "100", style: .default) { action in
             self.viewModel?.setRadius(value: 100)
         })
@@ -117,12 +123,8 @@ class HomeViewController: UIViewController, IHomeViewController {
     /* Get the current location of user and stop listening for location changes once map is loaded.
      */
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        guard let viewModel = viewModel else {
-            return
-        }
-        
         if let myLocation = change?[NSKeyValueChangeKey.newKey] as? CLLocation {
-            viewModel.setLocation(location: myLocation.coordinate)
+            viewModel?.setLocation(location: myLocation.coordinate)
             removeObserverForLocationChange()
         }
     }
@@ -133,6 +135,8 @@ class HomeViewController: UIViewController, IHomeViewController {
         mapView.settings.myLocationButton = show
     }
     
+    /* Show or hide full screen loader
+    */
     func toggleLoadingView(show: Bool) {
         if show {
             loadingView.show()
@@ -158,28 +162,31 @@ class HomeViewController: UIViewController, IHomeViewController {
         noBusStopsView.isHidden = !show
     }
     
-    func markBusStop(location: CLLocationCoordinate2D, name: String) {
-        let position = location
-        let marker = GMSMarker(position: position)
-        busStopMarkers.append(marker)
-        marker.title = "\(name)"
+    func markBusStop(marker: GMSMarker) {
         marker.icon = carMarkerImage
         marker.map = mapView
     }
     
     func removeAllMarkers() {
-        busStopMarkers = []
         mapView.clear()
     }
     
     @IBAction func gotoDummyLocation(sender: UIButton) {
-        viewModel?.setLocation(location: CLLocationCoordinate2D(latitude: 24.44072, longitude: 54.44392))
+        viewModel?.setLocation(location: dummyLocation)
     }
     
     deinit {
         removeObserverForLocationChange()
         if let foregroundNotification = foregroundNotification {
             NotificationCenter.default.removeObserver(foregroundNotification)
+        }
+    }
+    
+    func showBusStopViewController(busStop: BusStop) {
+        let storyBoard = UIStoryboard(name: "BusStop", bundle:nil)
+        if let busStopViewController = storyBoard.instantiateViewController(withIdentifier: "BusStopViewController") as? BusStopViewController {
+            busStopViewController.viewModel = BusStopViewModel(view: busStopViewController, busStop: busStop)
+            self.navigationController?.pushViewController(busStopViewController, animated: true)
         }
     }
 }
@@ -197,9 +204,7 @@ extension HomeViewController: GMSMapViewDelegate {
 //        }
 //    }
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        if let index = busStopMarkers.index(where: { $0 == marker }) {
-            viewModel?.tappedAt(index: index)
-        }
+        viewModel?.tappedAt(marker: marker)
         return false
     }
 }

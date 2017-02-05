@@ -16,7 +16,7 @@ protocol IHomeViewModel {
     func hookUpView()
     func setLocation(location: CLLocationCoordinate2D)
     func checkForAccess()
-    func tappedAt(index: Int)
+    func tappedAt(marker: GMSMarker)
     func setRadius(value: Int)
 }
 
@@ -40,6 +40,7 @@ class HomeViewModel: IHomeViewModel {
     
     var radius: Int = 1000
     var nearByBusStops = [BusStop]()
+    var busStopMarkers = [GMSMarker]()
     
     /* HomeViewModel should always have an associated View, hence only 1 init.
      */
@@ -90,6 +91,7 @@ class HomeViewModel: IHomeViewModel {
         //Reset the map state before fetching bus stops again
         view?.toggleLoadingView(show: true)
         view?.toggleNoBusStopsView(show: false)
+        busStopMarkers = []
         view?.removeAllMarkers()
         nearByBusStops = []
         
@@ -120,6 +122,11 @@ class HomeViewModel: IHomeViewModel {
                     }
                 }
                 self?.view?.toggleLoadingView(show: false)
+            } else {
+                self?.view?.toggleLoadingView(show: false)
+                self?.view?.showErrorMessage(title: nil, message: ErrorConstants.genericErrorMessage, actionTitle: "Retry", completionBlock: {
+                    self?.getNearByBusStops()
+                })
             }
             }, failure: {
                 [weak self] error in
@@ -136,13 +143,20 @@ class HomeViewModel: IHomeViewModel {
     func markBusStopsOnMap(busStops: [BusStop]) {
         for stop in busStops {
             if let location = stop.location {
-                view?.markBusStop(location: location, name: stop.name ?? "")
+                let marker = GMSMarker(position: location)
+                marker.title = "\(stop.name ?? "")"
+                view?.markBusStop(marker: marker)
+                busStopMarkers.append(marker)
+
             }
         }
     }
     
-    func tappedAt(index: Int) {
-        view?.showErrorMessage(title: "", message: "\(nearByBusStops[index].name)", actionTitle: nil, completionBlock: nil)
+    func tappedAt(marker: GMSMarker) {
+        if let index = busStopMarkers.index(where: { $0 == marker }) {
+            view?.showBusStopViewController(busStop: nearByBusStops[index])
+//            view?.showErrorMessage(title: "", message: "\(nearByBusStops[index].name)", actionTitle: nil, completionBlock: nil)
+        }
     }
     
     func setRadius(value: Int) {

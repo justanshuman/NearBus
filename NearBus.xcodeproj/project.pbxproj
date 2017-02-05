@@ -24,6 +24,15 @@
 		3402998B1E461D5F00758564 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3402998A1E461D5F00758564 /* Main.storyboard */; };
 		340299921E46253400758564 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340299911E46253400758564 /* LoadingView.swift */; };
 		340299941E46254500758564 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 340299931E46254500758564 /* LoadingView.xib */; };
+		348E97B61E47020B009B602D /* BusStop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 348E97AF1E47020B009B602D /* BusStop.storyboard */; };
+		348E97B71E47020B009B602D /* BusStopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E97B11E47020B009B602D /* BusStopViewController.swift */; };
+		348E97B81E47020B009B602D /* BusStopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E97B21E47020B009B602D /* BusStopViewModel.swift */; };
+		348E97B91E47020B009B602D /* BusListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E97B41E47020B009B602D /* BusListTableViewCell.swift */; };
+		348E97BA1E47020B009B602D /* BusListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 348E97B51E47020B009B602D /* BusListTableViewCell.xib */; };
+		348E97BD1E470368009B602D /* BusRoute.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 348E97BC1E470368009B602D /* BusRoute.storyboard */; };
+		348E97C01E4703A3009B602D /* BusRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E97BF1E4703A3009B602D /* BusRouteViewController.swift */; };
+		348E97C31E47040F009B602D /* BusRouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E97C21E47040F009B602D /* BusRouteViewModel.swift */; };
+		348E97C51E47071C009B602D /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E97C41E47071C009B602D /* Bus.swift */; };
 		70C42C7EB42DCF46120440AC /* Pods_NearBusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CEC79B2C63F7EBDA7230125 /* Pods_NearBusTests.framework */; };
 		7CDC5B0391DE15F7C0ED1DB9 /* Pods_NearBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C855BAC65EAD1777BFA318 /* Pods_NearBus.framework */; };
 		D6AE3B9616CCE7BA1AF42FEC /* Pods_NearBusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7899B77249949870CDAF66A /* Pods_NearBusUITests.framework */; };
@@ -70,6 +79,15 @@
 		3402998A1E461D5F00758564 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		340299911E46253400758564 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		340299931E46254500758564 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		348E97AF1E47020B009B602D /* BusStop.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BusStop.storyboard; sourceTree = "<group>"; };
+		348E97B11E47020B009B602D /* BusStopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopViewController.swift; sourceTree = "<group>"; };
+		348E97B21E47020B009B602D /* BusStopViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopViewModel.swift; sourceTree = "<group>"; };
+		348E97B41E47020B009B602D /* BusListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusListTableViewCell.swift; sourceTree = "<group>"; };
+		348E97B51E47020B009B602D /* BusListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusListTableViewCell.xib; sourceTree = "<group>"; };
+		348E97BC1E470368009B602D /* BusRoute.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BusRoute.storyboard; sourceTree = "<group>"; };
+		348E97BF1E4703A3009B602D /* BusRouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusRouteViewController.swift; sourceTree = "<group>"; };
+		348E97C21E47040F009B602D /* BusRouteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusRouteViewModel.swift; sourceTree = "<group>"; };
+		348E97C41E47071C009B602D /* Bus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
 		39C24577E40507DDB1616976 /* Pods-NearBusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearBusUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NearBusUITests/Pods-NearBusUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3CEC79B2C63F7EBDA7230125 /* Pods_NearBusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NearBusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64C855BAC65EAD1777BFA318 /* Pods_NearBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NearBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,24 +185,8 @@
 				340299671E45C4F700758564 /* Common */,
 				3402996C1E45C4F700758564 /* LandingPage */,
 				3402996B1E45C4F700758564 /* HomePage */,
-				340299651E45C4F700758564 /* BusRoutePage */,
-				340299661E45C4F700758564 /* BusStopPage */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		340299651E45C4F700758564 /* BusRoutePage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BusRoutePage;
-			sourceTree = "<group>";
-		};
-		340299661E45C4F700758564 /* BusStopPage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BusStopPage;
 			sourceTree = "<group>";
 		};
 		340299671E45C4F700758564 /* Common */ = {
@@ -229,6 +231,8 @@
 			children = (
 				340299831E46153900758564 /* HomePage.storyboard */,
 				340299851E46161A00758564 /* HomeView */,
+				348E97AE1E47020B009B602D /* BusStopPage */,
+				348E97BB1E470315009B602D /* BusRoutePage */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -254,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				3402997F1E4610AA00758564 /* BusStop.swift */,
+				348E97C41E47071C009B602D /* Bus.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -282,6 +287,53 @@
 				340299931E46254500758564 /* LoadingView.xib */,
 			);
 			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		348E97AE1E47020B009B602D /* BusStopPage */ = {
+			isa = PBXGroup;
+			children = (
+				348E97AF1E47020B009B602D /* BusStop.storyboard */,
+				348E97B01E47020B009B602D /* BusStopView */,
+				348E97B31E47020B009B602D /* TableViewCell */,
+			);
+			path = BusStopPage;
+			sourceTree = "<group>";
+		};
+		348E97B01E47020B009B602D /* BusStopView */ = {
+			isa = PBXGroup;
+			children = (
+				348E97B11E47020B009B602D /* BusStopViewController.swift */,
+				348E97B21E47020B009B602D /* BusStopViewModel.swift */,
+			);
+			path = BusStopView;
+			sourceTree = "<group>";
+		};
+		348E97B31E47020B009B602D /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				348E97B41E47020B009B602D /* BusListTableViewCell.swift */,
+				348E97B51E47020B009B602D /* BusListTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		348E97BB1E470315009B602D /* BusRoutePage */ = {
+			isa = PBXGroup;
+			children = (
+				348E97BC1E470368009B602D /* BusRoute.storyboard */,
+				348E97BE1E470388009B602D /* BusRouteView */,
+			);
+			name = BusRoutePage;
+			path = ../BusRoutePage;
+			sourceTree = "<group>";
+		};
+		348E97BE1E470388009B602D /* BusRouteView */ = {
+			isa = PBXGroup;
+			children = (
+				348E97BF1E4703A3009B602D /* BusRouteViewController.swift */,
+				348E97C21E47040F009B602D /* BusRouteViewModel.swift */,
+			);
+			path = BusRouteView;
 			sourceTree = "<group>";
 		};
 		6DAC6B744EAFC269CDC4CF28 /* Pods */ = {
@@ -429,6 +481,9 @@
 				340299841E46153900758564 /* HomePage.storyboard in Resources */,
 				3402998B1E461D5F00758564 /* Main.storyboard in Resources */,
 				340299721E45C4F700758564 /* Assets.xcassets in Resources */,
+				348E97BD1E470368009B602D /* BusRoute.storyboard in Resources */,
+				348E97B61E47020B009B602D /* BusStop.storyboard in Resources */,
+				348E97BA1E47020B009B602D /* BusListTableViewCell.xib in Resources */,
 				340299711E45C4F700758564 /* LaunchScreen.storyboard in Resources */,
 				340299941E46254500758564 /* LoadingView.xib in Resources */,
 			);
@@ -594,14 +649,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				340299791E46083A00758564 /* APIController.swift in Sources */,
+				348E97B91E47020B009B602D /* BusListTableViewCell.swift in Sources */,
 				340299891E46174E00758564 /* HomeViewModel.swift in Sources */,
 				340299771E46043D00758564 /* APIEndpoints.swift in Sources */,
 				340299921E46253400758564 /* LoadingView.swift in Sources */,
+				348E97B81E47020B009B602D /* BusStopViewModel.swift in Sources */,
+				348E97C31E47040F009B602D /* BusRouteViewModel.swift in Sources */,
 				340299821E4612F500758564 /* Extensions.swift in Sources */,
 				340299871E46162900758564 /* HomeViewController.swift in Sources */,
+				348E97B71E47020B009B602D /* BusStopViewController.swift in Sources */,
 				340299801E4610AA00758564 /* BusStop.swift in Sources */,
 				340299371E45C32A00758564 /* AppDelegate.swift in Sources */,
 				3402997D1E460A4700758564 /* ErrorConstants.swift in Sources */,
+				348E97C01E4703A3009B602D /* BusRouteViewController.swift in Sources */,
+				348E97C51E47071C009B602D /* Bus.swift in Sources */,
 				3402997B1E460A3300758564 /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

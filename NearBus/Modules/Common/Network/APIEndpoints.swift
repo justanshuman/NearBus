@@ -15,4 +15,7 @@ struct APIEndpoints {
     
     //HomePage APIs
     static let GET_NEARBY_BUS_STOPS             =     "busservice/api/v1/bus-stops/radius"
+    
+    //BusRoute APIs
+    static let GET_BUSSES_AT_STOP               =      "busservice/api/v1/buses/%d/bus-stops"
 }
