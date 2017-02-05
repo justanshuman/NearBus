@@ -17,9 +17,9 @@ protocol IBusRouteViewController: class {
     func showErrorMessage(title: String?, message: String?, actionTitle: String?, completionBlock: (() -> Void)?)
     func toggleRouteNotFoundView(show: Bool)
     func goBack()
-    func setupMapCameraCenterTo(location: CLLocationCoordinate2D)
     func plotRouteOnMap(points: [CLLocationCoordinate2D])
     func setUpBusInfo(number: String, name: String, description: String, destination: String)
+    func addMarker(marker: GMSMarker)
 }
 
 /* This class shows the details of the selected bus along with map that has route for the bus marked on it.
@@ -87,12 +87,6 @@ class BusRouteViewController: UIViewController, IBusRouteViewController {
         }
     }
     
-    /* Change the position of camera of the map. This is handled by ViewModel.
-     */
-    func setupMapCameraCenterTo(location: CLLocationCoordinate2D) {
-        mapView.camera = GMSCameraPosition.camera(withTarget: location, zoom: 13.5)
-    }
-    
     /* If we pass a list of coordinates, this function plots the route on map.
      */
     func plotRouteOnMap(points: [CLLocationCoordinate2D]) {
@@ -105,6 +99,17 @@ class BusRouteViewController: UIViewController, IBusRouteViewController {
         polyline.geodesic = true
         polyline.strokeColor = .blue
         polyline.map = mapView
+        
+        var bounds = GMSCoordinateBounds()
+        
+        for index in 1...path.count() {
+            bounds = bounds.includingCoordinate(path.coordinate(at: index))
+        }
+        mapView.animate(with: GMSCameraUpdate.fit(bounds))
+    }
+    
+    func addMarker(marker: GMSMarker) {
+        marker.map = mapView
     }
     
     func setUpBusInfo(number: String, name: String, description: String, destination: String) {

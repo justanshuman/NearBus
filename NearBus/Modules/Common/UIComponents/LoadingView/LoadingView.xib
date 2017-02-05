@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="lt0-Ba-EpT">
-                    <rect key="frame" x="177" y="323.5" width="20" height="20"/>
+                    <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="0.79207739093959728" alpha="0.41780711206896554" colorSpace="calibratedWhite"/>

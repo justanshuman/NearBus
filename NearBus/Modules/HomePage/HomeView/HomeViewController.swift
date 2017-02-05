@@ -83,7 +83,7 @@ class HomeViewController: UIViewController, IHomeViewController {
     /* Adds a Radius button on right side of Navigation bar, this button can be used to change Radius in which the bus stops will be searched.
      */
     func addSelectRadiusButton() {
-        let rightBarButtonItem = UIBarButtonItem(title: "Radius", style: .plain, target: self, action: #selector(radiusButtonPressed))
+        let rightBarButtonItem = UIBarButtonItem(title: "Set Radius", style: .plain, target: self, action: #selector(radiusButtonPressed))
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     

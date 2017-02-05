@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		340299371E45C32A00758564 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340299361E45C32A00758564 /* AppDelegate.swift */; };
-		3402994C1E45C32A00758564 /* NearBusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402994B1E45C32A00758564 /* NearBusTests.swift */; };
 		340299571E45C32A00758564 /* NearBusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340299561E45C32A00758564 /* NearBusUITests.swift */; };
 		340299711E45C4F700758564 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3402996D1E45C4F700758564 /* LaunchScreen.storyboard */; };
 		340299721E45C4F700758564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3402996F1E45C4F700758564 /* Assets.xcassets */; };
@@ -24,6 +23,17 @@
 		3402998B1E461D5F00758564 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3402998A1E461D5F00758564 /* Main.storyboard */; };
 		340299921E46253400758564 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340299911E46253400758564 /* LoadingView.swift */; };
 		340299941E46254500758564 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 340299931E46254500758564 /* LoadingView.xib */; };
+		3434E0C01E47B017006FABD2 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434E0BF1E47B017006FABD2 /* HomeViewModelTests.swift */; };
+		3434E0C31E47B292006FABD2 /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402997F1E4610AA00758564 /* BusStop.swift */; };
+		3434E0C41E47B295006FABD2 /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E97C41E47071C009B602D /* Bus.swift */; };
+		3434E0C51E47B298006FABD2 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DF97671E47116C00564095 /* Route.swift */; };
+		3434E0C61E47B29B006FABD2 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402997A1E460A3300758564 /* AppConstants.swift */; };
+		3434E0C71E47B29E006FABD2 /* ErrorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402997C1E460A4700758564 /* ErrorConstants.swift */; };
+		3434E0C81E47B2AD006FABD2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340299911E46253400758564 /* LoadingView.swift */; };
+		3434E0C91E47B2B1006FABD2 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 340299931E46254500758564 /* LoadingView.xib */; };
+		3434E0CA1E47B2C2006FABD2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340299811E4612F500758564 /* Extensions.swift */; };
+		3434E0CB1E47B2C8006FABD2 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340299781E46083A00758564 /* APIController.swift */; };
+		3434E0CC1E47B2CB006FABD2 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340299761E46043D00758564 /* APIEndpoints.swift */; };
 		348E97B61E47020B009B602D /* BusStop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 348E97AF1E47020B009B602D /* BusStop.storyboard */; };
 		348E97B71E47020B009B602D /* BusStopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E97B11E47020B009B602D /* BusStopViewController.swift */; };
 		348E97B81E47020B009B602D /* BusStopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E97B21E47020B009B602D /* BusStopViewModel.swift */; };
@@ -61,7 +71,6 @@
 		340299331E45C32A00758564 /* NearBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		340299361E45C32A00758564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		340299471E45C32A00758564 /* NearBusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearBusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3402994B1E45C32A00758564 /* NearBusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearBusTests.swift; sourceTree = "<group>"; };
 		3402994D1E45C32A00758564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		340299521E45C32A00758564 /* NearBusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearBusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		340299561E45C32A00758564 /* NearBusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearBusUITests.swift; sourceTree = "<group>"; };
@@ -81,6 +90,7 @@
 		3402998A1E461D5F00758564 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		340299911E46253400758564 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		340299931E46254500758564 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		3434E0BF1E47B017006FABD2 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		348E97AF1E47020B009B602D /* BusStop.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BusStop.storyboard; sourceTree = "<group>"; };
 		348E97B11E47020B009B602D /* BusStopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopViewController.swift; sourceTree = "<group>"; };
 		348E97B21E47020B009B602D /* BusStopViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopViewModel.swift; sourceTree = "<group>"; };
@@ -168,7 +178,7 @@
 		3402994A1E45C32A00758564 /* NearBusTests */ = {
 			isa = PBXGroup;
 			children = (
-				3402994B1E45C32A00758564 /* NearBusTests.swift */,
+				3434E0BF1E47B017006FABD2 /* HomeViewModelTests.swift */,
 				3402994D1E45C32A00758564 /* Info.plist */,
 			);
 			path = NearBusTests;
@@ -500,6 +510,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3434E0C91E47B2B1006FABD2 /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,7 +690,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3402994C1E45C32A00758564 /* NearBusTests.swift in Sources */,
+				3434E0CB1E47B2C8006FABD2 /* APIController.swift in Sources */,
+				3434E0C31E47B292006FABD2 /* BusStop.swift in Sources */,
+				3434E0CC1E47B2CB006FABD2 /* APIEndpoints.swift in Sources */,
+				3434E0C01E47B017006FABD2 /* HomeViewModelTests.swift in Sources */,
+				3434E0C51E47B298006FABD2 /* Route.swift in Sources */,
+				3434E0C61E47B29B006FABD2 /* AppConstants.swift in Sources */,
+				3434E0CA1E47B2C2006FABD2 /* Extensions.swift in Sources */,
+				3434E0C71E47B29E006FABD2 /* ErrorConstants.swift in Sources */,
+				3434E0C41E47B295006FABD2 /* Bus.swift in Sources */,
+				3434E0C81E47B2AD006FABD2 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -39,7 +39,6 @@ class BusRouteViewModel: IBusRouteViewModel {
         //view?.setTitle(title: bus.name ?? "")
         view?.setTitle(title: "Bus Route")
         getBusRoute()
-        view?.setupMapCameraCenterTo(location: location)
     }
     
     /* Get route for selected bus from local storage if they exist, else make API call to fetch them.
@@ -120,16 +119,12 @@ class BusRouteViewModel: IBusRouteViewModel {
         view?.plotRouteOnMap(points: points)
         view?.setUpBusInfo(number: bus.busNumber ?? "-", name: bus.name ?? "-", description: bus.description ?? "-", destination: bus.destination ?? "-")
         if points.count > 0 {
-            view?.setupMapCameraCenterTo(location: points[0])
-            
-            let marker1 = GMSMarker(position: points.first!)
-            view?.addMarker(marker: marker1)
-            markers.append(marker1)
-            let marker2 = GMSMarker(position: points.last!)
-            view?.addMarker(marker: marker2)
-            markers.append(marker2)
-
-            
+            let startMarker = GMSMarker(position: points.first!)
+            view?.addMarker(marker: startMarker)
+            markers.append(startMarker)
+            let endMarker = GMSMarker(position: points.last!)
+            view?.addMarker(marker: endMarker)
+            markers.append(endMarker)
             view?.toggleRouteNotFoundView(show: false)
         } else {
             view?.toggleRouteNotFoundView(show: true)

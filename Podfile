@@ -9,6 +9,7 @@ target 'NearBus' do
 	pod 'GoogleMaps'
   target 'NearBusTests' do
     inherit! :search_paths
+    pod 'GoogleMaps'
     # Pods for testing
   end
 

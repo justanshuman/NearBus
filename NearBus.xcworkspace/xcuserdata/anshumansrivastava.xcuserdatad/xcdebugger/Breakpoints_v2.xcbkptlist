@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NearBus/Modules/BusRoutePage/BusRouteView/BusRouteViewModel.swift"
-            timestampString = "508011311.43741"
+            timestampString = "508013843.734254"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168">
+            startingLineNumber = "163"
+            endingLineNumber = "163">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
