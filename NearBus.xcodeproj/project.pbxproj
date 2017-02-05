@@ -34,6 +34,10 @@
 		3434E0CA1E47B2C2006FABD2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340299811E4612F500758564 /* Extensions.swift */; };
 		3434E0CB1E47B2C8006FABD2 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340299781E46083A00758564 /* APIController.swift */; };
 		3434E0CC1E47B2CB006FABD2 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340299761E46043D00758564 /* APIEndpoints.swift */; };
+		3434E0D71E47B82B006FABD2 /* BusModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434E0D61E47B82B006FABD2 /* BusModelTests.swift */; };
+		3434E0DA1E47B8BB006FABD2 /* BusMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434E0D91E47B8BB006FABD2 /* BusMock.swift */; };
+		3434E0DE1E47BAA3006FABD2 /* BusStopMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434E0DD1E47BAA3006FABD2 /* BusStopMock.swift */; };
+		3434E0E01E47BBD9006FABD2 /* BusStopModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434E0DF1E47BBD9006FABD2 /* BusStopModelTests.swift */; };
 		348E97B61E47020B009B602D /* BusStop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 348E97AF1E47020B009B602D /* BusStop.storyboard */; };
 		348E97B71E47020B009B602D /* BusStopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E97B11E47020B009B602D /* BusStopViewController.swift */; };
 		348E97B81E47020B009B602D /* BusStopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E97B21E47020B009B602D /* BusStopViewModel.swift */; };
@@ -91,6 +95,10 @@
 		340299911E46253400758564 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		340299931E46254500758564 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		3434E0BF1E47B017006FABD2 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		3434E0D61E47B82B006FABD2 /* BusModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusModelTests.swift; sourceTree = "<group>"; };
+		3434E0D91E47B8BB006FABD2 /* BusMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusMock.swift; sourceTree = "<group>"; };
+		3434E0DD1E47BAA3006FABD2 /* BusStopMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopMock.swift; sourceTree = "<group>"; };
+		3434E0DF1E47BBD9006FABD2 /* BusStopModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopModelTests.swift; sourceTree = "<group>"; };
 		348E97AF1E47020B009B602D /* BusStop.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BusStop.storyboard; sourceTree = "<group>"; };
 		348E97B11E47020B009B602D /* BusStopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopViewController.swift; sourceTree = "<group>"; };
 		348E97B21E47020B009B602D /* BusStopViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopViewModel.swift; sourceTree = "<group>"; };
@@ -178,7 +186,10 @@
 		3402994A1E45C32A00758564 /* NearBusTests */ = {
 			isa = PBXGroup;
 			children = (
+				3434E0D81E47B8AD006FABD2 /* Mocks */,
 				3434E0BF1E47B017006FABD2 /* HomeViewModelTests.swift */,
+				3434E0D61E47B82B006FABD2 /* BusModelTests.swift */,
+				3434E0DF1E47BBD9006FABD2 /* BusStopModelTests.swift */,
 				3402994D1E45C32A00758564 /* Info.plist */,
 			);
 			path = NearBusTests;
@@ -303,6 +314,15 @@
 				340299931E46254500758564 /* LoadingView.xib */,
 			);
 			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		3434E0D81E47B8AD006FABD2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3434E0D91E47B8BB006FABD2 /* BusMock.swift */,
+				3434E0DD1E47BAA3006FABD2 /* BusStopMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		348E97AE1E47020B009B602D /* BusStopPage */ = {
@@ -692,12 +712,16 @@
 			files = (
 				3434E0CB1E47B2C8006FABD2 /* APIController.swift in Sources */,
 				3434E0C31E47B292006FABD2 /* BusStop.swift in Sources */,
+				3434E0E01E47BBD9006FABD2 /* BusStopModelTests.swift in Sources */,
 				3434E0CC1E47B2CB006FABD2 /* APIEndpoints.swift in Sources */,
+				3434E0D71E47B82B006FABD2 /* BusModelTests.swift in Sources */,
+				3434E0DA1E47B8BB006FABD2 /* BusMock.swift in Sources */,
 				3434E0C01E47B017006FABD2 /* HomeViewModelTests.swift in Sources */,
 				3434E0C51E47B298006FABD2 /* Route.swift in Sources */,
 				3434E0C61E47B29B006FABD2 /* AppConstants.swift in Sources */,
 				3434E0CA1E47B2C2006FABD2 /* Extensions.swift in Sources */,
 				3434E0C71E47B29E006FABD2 /* ErrorConstants.swift in Sources */,
+				3434E0DE1E47BAA3006FABD2 /* BusStopMock.swift in Sources */,
 				3434E0C41E47B295006FABD2 /* Bus.swift in Sources */,
 				3434E0C81E47B2AD006FABD2 /* LoadingView.swift in Sources */,
 			);

@@ -34,7 +34,8 @@ class HomeViewModelTests: XCTestCase {
     func testSetLocation() {
         let location = CLLocationCoordinate2D(latitude: 22.22, longitude: 22.22)
         viewModel.setLocation(location: location)
-        XCTAssert(location.latitude == viewModel.centerLocation?.latitude)
-        
+        XCTAssert(location.latitude == viewModel.centerLocation?.latitude && location.longitude == viewModel.centerLocation?.longitude)
     }
+    
+    
 }
