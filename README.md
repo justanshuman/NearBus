@@ -25,7 +25,6 @@ Proposed Improvements:
 - Handle No Internet case and show relevant error Messages.
 - Add more Unit Test Cases.
 - Add UI Test Cases.
-- 
 
 Instructions:
 - Open the app in Xcode 8+.
