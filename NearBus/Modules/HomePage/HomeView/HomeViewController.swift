@@ -20,7 +20,8 @@ protocol IHomeViewController: class {
     func markBusStop(marker: GMSMarker)
     func toggleNoBusStopsView(show: Bool)
     func removeAllMarkers()
-    func showBusStopViewController(busStop: BusStop)
+    func showBusStopViewController(busStop: BusStop, location: CLLocationCoordinate2D)
+    func removeObserverForLocationChange()
 }
 
 
@@ -41,7 +42,7 @@ class HomeViewController: UIViewController, IHomeViewController {
     //Declaring UImage as class var and reusing the same for each marker to improve GoogleMaps performance
     private var carMarkerImage: UIImage?
     private var dummyLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 24.44072, longitude: 54.44392)
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "NearBus"
@@ -74,7 +75,7 @@ class HomeViewController: UIViewController, IHomeViewController {
         mapView.isMyLocationEnabled = true
         locationManager.requestWhenInUseAuthorization()
         mapView.addObserver(self, forKeyPath: "myLocation", options: NSKeyValueObservingOptions.new, context: nil)
-        let camera = GMSCameraPosition.camera(withLatitude: 28.6139, longitude: 77.2090, zoom: 4)
+        let camera = GMSCameraPosition.camera(withLatitude: 24.4539, longitude: 54.3773, zoom: 4)
         mapView.camera = camera
     }
 
@@ -117,15 +118,14 @@ class HomeViewController: UIViewController, IHomeViewController {
     /* Change the position of camera of the map. This is handled by ViewModel
      */
     func setupMapCameraCenterTo(location: CLLocationCoordinate2D) {
-        mapView.camera = GMSCameraPosition.camera(withTarget: location, zoom: 15.0)
+        mapView.camera = GMSCameraPosition.camera(withTarget: location, zoom: 14.0)
     }
     
-    /* Get the current location of user and stop listening for location changes once map is loaded.
+    /* Get the current location of user. Update the location as and when user changes his location.
      */
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if let myLocation = change?[NSKeyValueChangeKey.newKey] as? CLLocation {
             viewModel?.setLocation(location: myLocation.coordinate)
-            removeObserverForLocationChange()
         }
     }
     
@@ -151,6 +151,8 @@ class HomeViewController: UIViewController, IHomeViewController {
         mapView.removeObserver(self, forKeyPath: "myLocation", context: nil)
     }
     
+    /* Configure and show a bus stop.
+     */
     func showErrorMessage(title: String?, message: String?, actionTitle: String?, completionBlock: (() -> Void)?) {
         showAlertPopUpWith(title: title, message: message, actionTitle: actionTitle, completionHandler: {
             done in
@@ -158,35 +160,48 @@ class HomeViewController: UIViewController, IHomeViewController {
         })
     }
     
+    /* Show or hide no bus stop view.
+     */
     func toggleNoBusStopsView(show: Bool) {
         noBusStopsView.isHidden = !show
     }
     
+    /* Create a bus stop marker on map.
+     */
     func markBusStop(marker: GMSMarker) {
         marker.icon = carMarkerImage
         marker.map = mapView
+        marker.snippet = "Tap here for more Info"
     }
     
+    /* Remove all bus stop markers when user changes location.
+     */
     func removeAllMarkers() {
         mapView.clear()
     }
     
+    /* Button click handler for Goto Dummy location Button
+     */
     @IBAction func gotoDummyLocation(sender: UIButton) {
         viewModel?.setLocation(location: dummyLocation)
     }
     
+    /* Navigate to Bus Stops view
+     */
+    func showBusStopViewController(busStop: BusStop, location: CLLocationCoordinate2D) {
+        let storyBoard = UIStoryboard(name: "BusStop", bundle:nil)
+        if let busStopViewController = storyBoard.instantiateViewController(withIdentifier: "BusStopViewController") as? BusStopViewController {
+            busStopViewController.viewModel = BusStopViewModel(view: busStopViewController, busStop: busStop, location: location)
+            self.navigationController?.pushViewController(busStopViewController, animated: true)
+        }
+    }
+    
+    /* Remove KVO when view is deallocated.
+     */
     deinit {
         removeObserverForLocationChange()
         if let foregroundNotification = foregroundNotification {
             NotificationCenter.default.removeObserver(foregroundNotification)
-        }
-    }
-    
-    func showBusStopViewController(busStop: BusStop) {
-        let storyBoard = UIStoryboard(name: "BusStop", bundle:nil)
-        if let busStopViewController = storyBoard.instantiateViewController(withIdentifier: "BusStopViewController") as? BusStopViewController {
-            busStopViewController.viewModel = BusStopViewModel(view: busStopViewController, busStop: busStop)
-            self.navigationController?.pushViewController(busStopViewController, animated: true)
         }
     }
 }
@@ -198,17 +213,17 @@ extension HomeViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
         viewModel?.checkForAccess()
     }
-//    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
-//        if let index = busStopMarkers.index(where: { $0 == marker }) {
-//            viewModel?.tappedAt(index: index)
-//        }
-//    }
-    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
         viewModel?.tappedAt(marker: marker)
+    }
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+//        viewModel?.tappedAt(marker: marker)
         return false
     }
 }
 
+/* Delegate callbacks for location manager.
+ */
 extension HomeViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         viewModel?.checkForAccess()

@@ -13,4 +13,7 @@ import Foundation
 struct ErrorConstants {
     static let noInternet                   =           "No Internet Connection"
     static let genericErrorMessage          =           "Sorry, something went wrong"
+    static let serverError                  =           "Not Found"
+    static let busStopDataNotFound          =           "Sorry! Could not find busses for selected Bus Stop"
+    static let routeNotFoundError           =           "Sorry! Route for selected bus could not be found."
 }

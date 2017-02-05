@@ -7,16 +7,21 @@
 //
 
 import UIKit
+import CoreLocation
 
+/* Protocol for BusStopViewController used by viewModel to control the view. Creating this protocol makes the code more testable.
+ */
 protocol IBusStopViewController: class {
     func setTitle(title: String)
     func toggleLoadingView(show: Bool)
     func showErrorMessage(title: String?, message: String?, actionTitle: String?, completionBlock: (() -> Void)?)
     func toggleNoBusView(show: Bool)
     func reloadData()
-    func showBusRouteViewController(bus: Bus)
+    func showBusRouteViewController(bus: Bus, location: CLLocationCoordinate2D)
 }
 
+/* This class shows the list of buses at the selected bus stop.
+ */
 class BusStopViewController: UIViewController, IBusStopViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -35,6 +40,8 @@ class BusStopViewController: UIViewController, IBusStopViewController {
         viewModel?.hookUpView()
     }
     
+    /* Set title on navigation bar
+     */
     func setTitle(title: String) {
         self.title = title
     }
@@ -56,6 +63,8 @@ class BusStopViewController: UIViewController, IBusStopViewController {
         }
     }
     
+    /* Configure and show error message popup.
+     */
     func showErrorMessage(title: String?, message: String?, actionTitle: String?, completionBlock: (() -> Void)?) {
         showAlertPopUpWith(title: title, message: message, actionTitle: actionTitle, completionHandler: {
             done in
@@ -63,23 +72,30 @@ class BusStopViewController: UIViewController, IBusStopViewController {
         })
     }
     
+    /* Show or hide No bus found view
+     */
     func toggleNoBusView(show: Bool) {
         noBusesViiew.isHidden = !show
     }
 
+    /* Refresh tableview data
+     */
     func reloadData() {
         tableView.reloadData()
     }
     
-    func showBusRouteViewController(bus: Bus) {
+    /* Navigate to Bus Route view controller
+     */
+    func showBusRouteViewController(bus: Bus, location: CLLocationCoordinate2D) {
         let storyBoard = UIStoryboard(name: "BusRoute", bundle:nil)
         if let busRouteViewController = storyBoard.instantiateViewController(withIdentifier: "BusRouteViewController") as? BusRouteViewController {
-            busRouteViewController.viewModel = BusRouteViewModel(view: busRouteViewController, bus: bus)
+            busRouteViewController.viewModel = BusRouteViewModel(view: busRouteViewController, bus: bus, location: location)
             self.navigationController?.pushViewController(busRouteViewController, animated: true)
         }
     }
 }
 
+//Mark: TableView methods
 extension BusStopViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.getNumberOfBuses() ?? 0
@@ -88,7 +104,7 @@ extension BusStopViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! BusListTableViewCell
         cell.selectionStyle = .none
-        cell.textLabel?.text = viewModel?.getBusFor(index: indexPath.row).name ?? ""
+        cell.setup(number: "\(viewModel?.getBusFor(index: indexPath.row).busNumber ?? "")", name: "\(viewModel?.getBusFor(index: indexPath.row).name ?? "")")
         return cell
     }
     
@@ -97,6 +113,26 @@ extension BusStopViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 44
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view: UIView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 44))
+        view.backgroundColor = UIColor.white
+        let label: UILabel = UILabel(frame: CGRect(x: 10, y: 13,width: UIScreen.main.bounds.width - 10, height: 18))
+        label.textColor = UIColor.darkGray
+        label.backgroundColor = UIColor.white
+        label.font = UIFont.systemFont(ofSize: 15)
+        label.text = "Select bus to get Route"
+        view.layer.shadowColor = UIColor.gray.cgColor
+        view.layer.shadowRadius = 1.5
+        view.layer.shadowOpacity = 0.3
+        view.layer.shadowOffset = CGSize(width: 0, height: 0)
+        view.addSubview(label)
+        return view
     }
 }

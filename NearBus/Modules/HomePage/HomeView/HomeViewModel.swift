@@ -83,6 +83,8 @@ class HomeViewModel: IHomeViewModel {
         getNearByBusStops()
     }
     
+    /* Get bus stops around current location
+     */
     func getNearByBusStops() {
         guard let centerLocation = centerLocation else {
             return
@@ -98,6 +100,8 @@ class HomeViewModel: IHomeViewModel {
         fetchNearbyBusStops(latitude: centerLocation.latitude, longitude: centerLocation.longitude, radius: radius)
     }
     
+    /* Make API call to fetch bus stops around current location
+     */
     func fetchNearbyBusStops(latitude: Double, longitude: Double, radius: Int) {
         
         let params = ["lat": "\(latitude)",
@@ -117,6 +121,8 @@ class HomeViewModel: IHomeViewModel {
                     if stops.count > 0 {
                         self?.markBusStopsOnMap(busStops: stops)
                         self?.view?.toggleNoBusStopsView(show: false)
+                        //Stop listening for location once bus stops have been fetched.
+                        self?.view?.removeObserverForLocationChange()
                     } else {
                         self?.view?.toggleNoBusStopsView(show: true)
                     }
@@ -140,6 +146,8 @@ class HomeViewModel: IHomeViewModel {
         
     }
     
+    /* Create markers on map after bus stop list is fetched
+     */
     func markBusStopsOnMap(busStops: [BusStop]) {
         for stop in busStops {
             if let location = stop.location {
@@ -152,13 +160,16 @@ class HomeViewModel: IHomeViewModel {
         }
     }
     
+    /* Callback when user taps on any marker.
+     */
     func tappedAt(marker: GMSMarker) {
-        if let index = busStopMarkers.index(where: { $0 == marker }) {
-            view?.showBusStopViewController(busStop: nearByBusStops[index])
-//            view?.showErrorMessage(title: "", message: "\(nearByBusStops[index].name)", actionTitle: nil, completionBlock: nil)
+        if let index = busStopMarkers.index(where: { $0 == marker }), let centerLocation = centerLocation {
+            view?.showBusStopViewController(busStop: nearByBusStops[index], location: centerLocation)
         }
     }
     
+    /* Set radius value around current location where bus stops are searched.
+     */
     func setRadius(value: Int) {
         radius = value
         getNearByBusStops()

@@ -11,24 +11,30 @@ import CoreLocation
 
 struct Bus {
     var id: Int?
-    var busStopId: String?
+    var busId: String?
     var name: String?
-    var location: CLLocationCoordinate2D?
+    var busNumber: String?
+    var description: String?
+    var destination: String?
     
     init(bus: [String: AnyObject]) {
         if let id = bus["id"] as? Int {
             self.id = id
         }
-        if let busStopId = bus["busStopId"] as? String {
-            self.busStopId = busStopId
+        if let busId = bus["busId"] as? String {
+            self.busId = busId
         }
         if let name = bus["name"] as? String {
             self.name = name
         }
-        if let location = bus["location"] as? [String: AnyObject] {
-            if let coordinates = location["coordinates"] as? [Double], coordinates.count == 2 {
-                self.location = CLLocationCoordinate2D(latitude: coordinates[1], longitude: coordinates[0])
-            }
+        if let busNumber = bus["number"] as? String {
+            self.busNumber = busNumber
+        }
+        if let description = bus["description"] as? String {
+            self.description = description
+        }
+        if let destination = bus["destination"] as? String {
+            self.destination = destination
         }
     }
 }

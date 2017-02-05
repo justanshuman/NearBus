@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 protocol IBusStopViewModel {
     func hookUpView()
@@ -15,6 +16,8 @@ protocol IBusStopViewModel {
     func selectedBusAt(index: Int)
 }
 
+/*Actual implementation of BusStopViewModel. This class will have all Logic and state required for BusStopView. This will help in keeping the view (i.e. ViewController) a dumb class.
+ */
 class BusStopViewModel: IBusStopViewModel {
     
     /* View is a weak object for BusStopView.
@@ -23,11 +26,13 @@ class BusStopViewModel: IBusStopViewModel {
     
     var busStop: BusStop
     var bussesList = [Bus]()
+    let location: CLLocationCoordinate2D
     /* HomeViewModel should always have an associated View, hence only 1 init.
      */
-    init(view: IBusStopViewController, busStop: BusStop) {
+    init(view: IBusStopViewController, busStop: BusStop, location: CLLocationCoordinate2D) {
         self.view = view
         self.busStop = busStop
+        self.location = location
     }
     
     /* Called when view is loaded. Do the setup of view here
@@ -37,6 +42,8 @@ class BusStopViewModel: IBusStopViewModel {
         getAllBusses()
     }
     
+    /* Get busses for current bus stop
+     */
     func getAllBusses() {
         guard let id = busStop.id else {
             return
@@ -44,6 +51,8 @@ class BusStopViewModel: IBusStopViewModel {
         fetchBusListForBusStopsWith(id: id)
     }
     
+    /* Make API call to fetch busses for current bus stop
+     */
     func fetchBusListForBusStopsWith(id: Int) {
         view?.toggleLoadingView(show: true)
         let url = String(format: APIEndpoints.GET_BUSSES_AT_STOP, id)
@@ -75,7 +84,11 @@ class BusStopViewModel: IBusStopViewModel {
                 [weak self] error in
                 if let errorMessage = error?["error"] as? String {
                     self?.view?.toggleLoadingView(show: false)
-                    self?.view?.showErrorMessage(title: nil, message: errorMessage, actionTitle: "Retry", completionBlock: {
+                    var errortoShow = errorMessage
+                    if errorMessage.compare(ErrorConstants.serverError) == .orderedSame {
+                        errortoShow = ErrorConstants.busStopDataNotFound
+                    }
+                    self?.view?.showErrorMessage(title: nil, message: errortoShow, actionTitle: "Retry", completionBlock: {
                         self?.getAllBusses()
                     })
                 }
@@ -83,15 +96,21 @@ class BusStopViewModel: IBusStopViewModel {
         
     }
     
+    /* Returns number of busses to be shown in tableview
+     */
     func getNumberOfBuses() -> Int {
         return bussesList.count
     }
     
+    /* Returns Bus object to be shown at a particular index in tableview.
+     */
     func getBusFor(index: Int) -> Bus {
         return bussesList[index]
     }
     
+    /* Callback from view when user selects any row.
+     */
     func selectedBusAt(index: Int) {
-        view?.showBusRouteViewController(bus: bussesList[index])
+        view?.showBusRouteViewController(bus: bussesList[index], location: location)
     }
 }

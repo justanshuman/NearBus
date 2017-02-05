@@ -20,19 +20,6 @@ class APIController {
     /* This function is used to make any GET call throughout the app. It can be modified to make POST/PUT etc.
  */
     static func makeGetRequest(path: String, header: Dictionary<String, String>? = nil, parameters: Dictionary<String, String>?, body: AnyObject?, success: CompletionBlock?, failure: CompletionBlock?) {
-        
-//        if let reachability = try? Reachability.reachabilityForInternetConnection() {
-//            if reachability.isReachable() {
-//                isNetworkReachable = true
-//            } else {
-//                if isNetworkReachable {
-//                    isNetworkReachable = false
-//                    showNetworkUnreachable("GET", path: path, parameters: parameters, body: body, success: success, failure: failure)
-//                }
-//                return nil
-//            }
-//        }
-        
         let targetURL: String = APIEndpoints.BASE_URL + path
         var queryString = targetURL.range(of: "?") != nil ? "&" : "?"
         if let params = parameters {
@@ -76,10 +63,19 @@ class APIController {
                     UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 })
                 
+                if let r = response as? HTTPURLResponse {
+                    if r.statusCode != 200 {
+                        DispatchQueue.main.async(execute: { () -> Void in
+                            failure?(["error": ErrorConstants.serverError as AnyObject])
+                        })
+                        return
+                    }
+                }
                 if error != nil {
                     DispatchQueue.main.async(execute: { () -> Void in
                         failure?(["error": ErrorConstants.genericErrorMessage as AnyObject])
                     })
+                
                 } else if let d = data {
                     do {
                         let jsonObject: Any = try JSONSerialization.jsonObject(with: d, options: .mutableContainers)
