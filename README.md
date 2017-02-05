@@ -7,7 +7,7 @@ Generic Features:
 - Added a button to goto DummyLocation in case no Bus Stops in your current area.
 - No JSON parsing library used, Models parse the json respone.
 - No Networking Library used, App has a Network Layer of its' own built using URLSession class.
-- Radius can be changed Via "Set Radius" button on navigation bar of Home View.
+- Default Radius is 500, but can be changed Via "Set Radius" button on navigation bar of Home View.
 - GPX file added with Dummy Location to test on simulators.
 - No gitignore for simplicity
 - Uses GoogleMaps instead of Apple Maps, no particular reason for this.
